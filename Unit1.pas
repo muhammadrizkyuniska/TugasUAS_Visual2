@@ -61,9 +61,9 @@ type
     edt6: TEdit;
     cbb1: TComboBox;
     cbb2: TComboBox;
+    btn6: TButton;
     frxdbdtst1: TfrxDBDataset;
     frxrprt1: TfrxReport;
-    btn6: TButton;
     procedure dbgrd1CellClick(Column: TColumn);
     procedure btn1Click(Sender: TObject);
     procedure btn2Click(Sender: TObject);
@@ -74,6 +74,8 @@ type
     procedure posisiawal;
     procedure bersih;
     procedure btn6Click(Sender: TObject);
+    procedure frxrprt1ClickObject(View: TfrxView; Button: TMouseButton;
+      Shift: TShiftState; var Modified: Boolean);
   private
     { Private declarations }
   public
@@ -85,6 +87,8 @@ var
   id:string;
 
 implementation
+
+uses Unit4;
 
 {$R *.dfm}
 
@@ -353,7 +357,20 @@ end;
 
 procedure TForm1.btn6Click(Sender: TObject);
 begin
-  frxrprt1.ShowReport;
+  frxrprt1.ShowReport();
+end;
+
+procedure TForm1.frxrprt1ClickObject(View: TfrxView;
+  Button: TMouseButton; Shift: TShiftState; var Modified: Boolean);
+begin
+  if View.Name ='Memo7' then
+  begin
+     Form4.zqry2.SQL.Clear;
+     Form4.zqry2.SQL.Add('select * from siswa where nama_siswa="'+View.TagStr+'"');
+     Form4.zqry2.Open;
+
+     Form4.frxrprt1.ShowReport();
+  end;
 end;
 
 end.

@@ -58,6 +58,8 @@ type
     procedure posisiawal;
     procedure bersih;
     procedure btn6Click(Sender: TObject);
+    procedure frxrprt1ClickObject(View: TfrxView; Button: TMouseButton;
+      Shift: TShiftState; var Modified: Boolean);
   private
     { Private declarations }
   public
@@ -69,6 +71,8 @@ var
   id:string;
 
 implementation
+
+uses Unit4;
 
 {$R *.dfm}
 
@@ -274,9 +278,22 @@ end;
 
 procedure TForm2.btn6Click(Sender: TObject);
 begin
-  frxrprt1.ShowReport;
+  frxrprt1.ShowReport();
 end;
 
 
+
+procedure TForm2.frxrprt1ClickObject(View: TfrxView;
+  Button: TMouseButton; Shift: TShiftState; var Modified: Boolean);
+begin
+  if View.Name ='memo11' then
+  begin
+     Form4.zqry2.SQL.Clear;
+     Form4.zqry2.SQL.Add('select * from orang_tua where nama_ortu="'+View.TagStr+'"');
+     Form4.zqry2.Open;
+
+     Form4.frxrprt1.ShowReport;
+  end;
+end;
 
 end.

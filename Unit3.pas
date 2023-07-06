@@ -42,6 +42,9 @@ type
     con1: TZConnection;
     ds1: TDataSource;
     cbb2: TComboBox;
+    btn6: TButton;
+    frxdbdtst1: TfrxDBDataset;
+    frxrprt1: TfrxReport;
     procedure btn1Click(Sender: TObject);
     procedure btn2Click(Sender: TObject);
     procedure btn3Click(Sender: TObject);
@@ -51,6 +54,7 @@ type
     procedure posisiawal;
     procedure FormShow(Sender: TObject);
     procedure dbgrd1CellClick(Column: TColumn);
+    procedure btn6Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -251,6 +255,11 @@ begin
   btn3.Enabled:= True;
   btn4.Enabled:= True;
   btn5.Enabled:= True;
+end;
+
+procedure TForm3.btn6Click(Sender: TObject);
+begin
+  frxrprt1.ShowReport();
 end;
 
 end.

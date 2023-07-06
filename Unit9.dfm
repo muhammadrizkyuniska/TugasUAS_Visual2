@@ -1,6 +1,6 @@
 object Form9: TForm9
-  Left = 578
-  Top = 199
+  Left = 150
+  Top = 61
   Width = 882
   Height = 638
   Caption = 'TAMPILKAN QUERY'
@@ -14,8 +14,8 @@ object Form9: TForm9
   PixelsPerInch = 96
   TextHeight = 13
   object lbl1: TLabel
-    Left = 58
-    Top = 108
+    Left = 63
+    Top = 21
     Width = 40
     Height = 18
     Caption = 'NAMA'
@@ -27,8 +27,8 @@ object Form9: TForm9
     ParentFont = False
   end
   object lbl10: TLabel
-    Left = 126
-    Top = 108
+    Left = 130
+    Top = 21
     Width = 5
     Height = 18
     Caption = ':'
@@ -159,8 +159,8 @@ object Form9: TForm9
     TabOrder = 8
   end
   object cbb1: TComboBox
-    Left = 163
-    Top = 111
+    Left = 166
+    Top = 20
     Width = 541
     Height = 21
     ItemHeight = 13
@@ -238,6 +238,13 @@ object Form9: TForm9
       'kelas'
       'riwayat_poin'
       'user')
+  end
+  object edt1: TEdit
+    Left = 166
+    Top = 44
+    Width = 537
+    Height = 21
+    TabOrder = 10
   end
   object zqry1: TZQuery
     Connection = con1

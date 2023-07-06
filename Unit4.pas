@@ -46,8 +46,6 @@ type
     procedure btn3Click(Sender: TObject);
     procedure btn4Click(Sender: TObject);
     procedure btn6Click(Sender: TObject);
-    procedure frxrprt1ClickObject(View: TfrxView; Button: TMouseButton;
-      Shift: TShiftState; var Modified: Boolean);
   private
     { Private declarations }
   public
@@ -213,29 +211,7 @@ end;
 
 procedure TForm4.btn6Click(Sender: TObject);
 begin
-  frxrprt1.ShowReport;
-end;
-
-procedure TForm4.frxrprt1ClickObject(View: TfrxView;
-  Button: TMouseButton; Shift: TShiftState; var Modified: Boolean);
-begin
-  if view.Name ='memo7' then
-  begin
-     zqry2.SQL.Clear;
-     zqry2.SQL.Add('SELECT * FROM siswa where nama_siswa="'+View.TagStr+'"');
-     zqry2.Open;
-
-     Form1.frxrprt1.ShowReport;
-  end else
-  if view.Name ='memo8' then
-  begin
-     zqry2.SQL.Clear;
-     zqry2.SQL.Add('SELECT * FROM orang_tua where nama_siswa="'+View.TagStr+'"');
-     zqry2.Open;
-
-     Form2.frxrprt1.ShowReport;
-  end;
-
+  frxrprt1.ShowReport();
 end;
 
 end.

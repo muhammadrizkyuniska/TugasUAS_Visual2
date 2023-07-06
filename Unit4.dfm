@@ -1,6 +1,6 @@
 object Form4: TForm4
-  Left = 397
-  Top = 159
+  Left = 862
+  Top = 97
   Width = 897
   Height = 794
   Caption = 'Hubungan'
@@ -255,7 +255,7 @@ object Form4: TForm4
     SQL.Strings = (
       'select * from hubungan')
     Params = <>
-    Left = 796
+    Left = 795
     Top = 260
   end
   object con1: TZConnection
@@ -299,12 +299,20 @@ object Form4: TForm4
     Top = 307
   end
   object frxdbdtst1: TfrxDBDataset
-    UserName = 'frxDBDataset1'
+    UserName = 'frxDBDatasetHbng'
     CloseDataSource = False
+    FieldAliases.Strings = (
+      'id=id'
+      'id_1=id_1'
+      'nama_siswa=nama_siswa'
+      'id_2=id_2'
+      'nama_ortu=nama_ortu'
+      'status_hub_anak=status_hub_anak'
+      'status=status')
     DataSet = zqry2
     BCDToCurrency = False
-    Left = 784
-    Top = 357
+    Left = 781
+    Top = 367
   end
   object frxrprt1: TfrxReport
     Version = '6.9.15'
@@ -315,19 +323,18 @@ object Form4: TForm4
     PrintOptions.Printer = #199#225#197#221#202#209#199#214#237
     PrintOptions.PrintOnSheet = 0
     ReportOptions.CreateDate = 45075.558876076400000000
-    ReportOptions.LastChange = 45111.579147465300000000
+    ReportOptions.LastChange = 45113.433116284720000000
     ScriptLanguage = 'PascalScript'
     ScriptText.Strings = (
       'begin'
       ''
       'end.')
-    OnClickObject = frxrprt1ClickObject
-    Left = 839
-    Top = 358
+    Left = 834
+    Top = 367
     Datasets = <
       item
         DataSet = frxdbdtst1
-        DataSetName = 'frxDBDataset1'
+        DataSetName = 'frxDBDatasetHbng'
       end>
     Variables = <>
     Style = <>
@@ -385,15 +392,16 @@ object Form4: TForm4
         Top = 241.889920000000000000
         Width = 740.409927000000000000
         DataSet = frxdbdtst1
-        DataSetName = 'frxDBDataset1'
+        DataSetName = 'frxDBDatasetHbng'
         RowCount = 0
         object Memo6: TfrxMemoView
           AllowVectorExport = True
           Left = 64.252010000000000000
           Width = 37.795300000000000000
           Height = 45.354360000000000000
+          TagStr = '[frxDBDatasetHbng."nama_ortu"]'
           DataSet = frxdbdtst1
-          DataSetName = 'frxDBDataset1'
+          DataSetName = 'frxDBDatasetHbng'
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clBlack
           Font.Height = -13
@@ -412,9 +420,10 @@ object Form4: TForm4
           Left = 102.047310000000000000
           Width = 139.842610000000000000
           Height = 45.354360000000000000
-          TagStr = '[frxDBDataset1."nama_siswa"]'
+          TagStr = '[frxDBDatasetHbng."nama_ortu"]'
+          DataField = 'nama_siswa'
           DataSet = frxdbdtst1
-          DataSetName = 'frxDBDataset1'
+          DataSetName = 'frxDBDatasetHbng'
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clGreen
           Font.Height = -13
@@ -424,7 +433,7 @@ object Form4: TForm4
           Frame.Width = 1.500000000000000000
           HAlign = haCenter
           Memo.UTF8 = (
-            '[frxDBDataset1."nama_siswa"]')
+            '[frxDBDatasetHbng."nama_siswa"]')
           ParentFont = False
           VAlign = vaCenter
         end
@@ -433,9 +442,10 @@ object Form4: TForm4
           Left = 389.291590000000000000
           Width = 200.315090000000000000
           Height = 45.354360000000000000
+          TagStr = '[frxDBDatasetHbng."nama_ortu"]'
           DataField = 'status_hub_anak'
           DataSet = frxdbdtst1
-          DataSetName = 'frxDBDataset1'
+          DataSetName = 'frxDBDatasetHbng'
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clBlack
           Font.Height = -13
@@ -445,7 +455,7 @@ object Form4: TForm4
           Frame.Width = 1.500000000000000000
           HAlign = haCenter
           Memo.UTF8 = (
-            '[frxDBDataset1."status_hub_anak"]')
+            '[frxDBDatasetHbng."status_hub_anak"]')
           ParentFont = False
           VAlign = vaCenter
         end
@@ -454,9 +464,10 @@ object Form4: TForm4
           Left = 589.606680000000000000
           Width = 109.606370000000000000
           Height = 45.354360000000000000
+          TagStr = '[frxDBDatasetHbng."nama_ortu"]'
           DataField = 'status'
           DataSet = frxdbdtst1
-          DataSetName = 'frxDBDataset1'
+          DataSetName = 'frxDBDatasetHbng'
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clBlack
           Font.Height = -13
@@ -466,7 +477,7 @@ object Form4: TForm4
           Frame.Width = 1.500000000000000000
           HAlign = haCenter
           Memo.UTF8 = (
-            '[frxDBDataset1."status"]')
+            '[frxDBDatasetHbng."status"]')
           ParentFont = False
           VAlign = vaCenter
         end
@@ -475,9 +486,8 @@ object Form4: TForm4
           Left = 241.889920000000000000
           Width = 147.401670000000000000
           Height = 45.354360000000000000
-          TagStr = '[frxDBDataset1."nama_ortu"]'
           DataSet = frxdbdtst1
-          DataSetName = 'frxDBDataset1'
+          DataSetName = 'frxDBDatasetHbng'
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clOlive
           Font.Height = -13
@@ -487,7 +497,7 @@ object Form4: TForm4
           Frame.Width = 1.500000000000000000
           HAlign = haCenter
           Memo.UTF8 = (
-            '[frxDBDataset1."nama_ortu"]')
+            '[frxDBDatasetHbng."nama_ortu"]')
           ParentFont = False
           VAlign = vaCenter
         end
@@ -526,7 +536,7 @@ object Form4: TForm4
           Width = 139.842610000000000000
           Height = 45.354360000000000000
           DataSet = frxdbdtst1
-          DataSetName = 'frxDBDataset1'
+          DataSetName = 'frxDBDatasetHbng'
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clBlack
           Font.Height = -13

@@ -462,7 +462,7 @@ object Form2: TForm2
     Top = 144
   end
   object frxdbdtst1: TfrxDBDataset
-    UserName = 'frxDBDataset1'
+    UserName = 'frxDBDatasetOrtu'
     CloseDataSource = False
     DataSet = zqry1
     BCDToCurrency = False
@@ -478,18 +478,19 @@ object Form2: TForm2
     PrintOptions.Printer = #199#225#197#221#202#209#199#214#237
     PrintOptions.PrintOnSheet = 0
     ReportOptions.CreateDate = 45075.558876076400000000
-    ReportOptions.LastChange = 45110.989859942100000000
+    ReportOptions.LastChange = 45113.406636620370000000
     ScriptLanguage = 'PascalScript'
     ScriptText.Strings = (
       'begin'
       ''
       'end.')
+    OnClickObject = frxrprt1ClickObject
     Left = 787
     Top = 200
     Datasets = <
       item
         DataSet = frxdbdtst1
-        DataSetName = 'frxDBDataset1'
+        DataSetName = 'frxDBDatasetOrtu'
       end>
     Variables = <>
     Style = <>
@@ -547,14 +548,14 @@ object Form2: TForm2
         Top = 241.889920000000000000
         Width = 740.409927000000000000
         DataSet = frxdbdtst1
-        DataSetName = 'frxDBDataset1'
+        DataSetName = 'frxDBDatasetOrtu'
         RowCount = 0
         object Memo6: TfrxMemoView
           AllowVectorExport = True
           Width = 37.795300000000000000
           Height = 45.354360000000000000
           DataSet = frxdbdtst1
-          DataSetName = 'frxDBDataset1'
+          DataSetName = 'frxDBDatasetOrtu'
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clBlack
           Font.Height = -13
@@ -573,9 +574,10 @@ object Form2: TForm2
           Left = 37.795300000000000000
           Width = 139.842610000000000000
           Height = 45.354360000000000000
+          TagStr = '[frxDBDatasetOrtu."nama_ortu"]'
           DataField = 'nama_ortu'
           DataSet = frxdbdtst1
-          DataSetName = 'frxDBDataset1'
+          DataSetName = 'frxDBDatasetOrtu'
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clBlack
           Font.Height = -13
@@ -585,7 +587,7 @@ object Form2: TForm2
           Frame.Width = 1.500000000000000000
           HAlign = haCenter
           Memo.UTF8 = (
-            '[frxDBDataset1."nama_ortu"]')
+            '[frxDBDatasetOrtu."nama_ortu"]')
           ParentFont = False
           VAlign = vaCenter
         end
@@ -596,7 +598,7 @@ object Form2: TForm2
           Height = 45.354360000000000000
           DataField = 'alamat'
           DataSet = frxdbdtst1
-          DataSetName = 'frxDBDataset1'
+          DataSetName = 'frxDBDatasetOrtu'
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clBlack
           Font.Height = -13
@@ -606,7 +608,7 @@ object Form2: TForm2
           Frame.Width = 1.500000000000000000
           HAlign = haCenter
           Memo.UTF8 = (
-            '[frxDBDataset1."alamat"]')
+            '[frxDBDatasetOrtu."alamat"]')
           ParentFont = False
           VAlign = vaCenter
         end
@@ -617,7 +619,7 @@ object Form2: TForm2
           Height = 45.354360000000000000
           DataField = 'status'
           DataSet = frxdbdtst1
-          DataSetName = 'frxDBDataset1'
+          DataSetName = 'frxDBDatasetOrtu'
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clBlack
           Font.Height = -13
@@ -627,7 +629,7 @@ object Form2: TForm2
           Frame.Width = 1.500000000000000000
           HAlign = haCenter
           Memo.UTF8 = (
-            '[frxDBDataset1."status"]')
+            '[frxDBDatasetOrtu."status"]')
           ParentFont = False
           VAlign = vaCenter
         end
@@ -638,7 +640,7 @@ object Form2: TForm2
           Height = 45.354360000000000000
           DataField = 'jenis_kelamin'
           DataSet = frxdbdtst1
-          DataSetName = 'frxDBDataset1'
+          DataSetName = 'frxDBDatasetOrtu'
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clBlack
           Font.Height = -13
@@ -648,7 +650,7 @@ object Form2: TForm2
           Frame.Width = 1.500000000000000000
           HAlign = haCenter
           Memo.UTF8 = (
-            '[frxDBDataset1."jenis_kelamin"]')
+            '[frxDBDatasetOrtu."jenis_kelamin"]')
           ParentFont = False
           VAlign = vaCenter
         end
@@ -659,7 +661,7 @@ object Form2: TForm2
           Height = 45.354360000000000000
           DataField = 'telp'
           DataSet = frxdbdtst1
-          DataSetName = 'frxDBDataset1'
+          DataSetName = 'frxDBDatasetOrtu'
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clBlack
           Font.Height = -13
@@ -669,7 +671,7 @@ object Form2: TForm2
           Frame.Width = 1.500000000000000000
           HAlign = haCenter
           Memo.UTF8 = (
-            '[frxDBDataset1."telp"]')
+            '[frxDBDatasetOrtu."telp"]')
           ParentFont = False
           VAlign = vaCenter
         end
@@ -680,7 +682,7 @@ object Form2: TForm2
           Height = 45.354360000000000000
           DataField = 'agama'
           DataSet = frxdbdtst1
-          DataSetName = 'frxDBDataset1'
+          DataSetName = 'frxDBDatasetOrtu'
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clBlack
           Font.Height = -13
@@ -690,7 +692,7 @@ object Form2: TForm2
           Frame.Width = 1.500000000000000000
           HAlign = haCenter
           Memo.UTF8 = (
-            '[frxDBDataset1."agama"]')
+            '[frxDBDatasetOrtu."agama"]')
           ParentFont = False
           VAlign = vaCenter
         end
@@ -728,7 +730,7 @@ object Form2: TForm2
           Width = 139.842610000000000000
           Height = 45.354360000000000000
           DataSet = frxdbdtst1
-          DataSetName = 'frxDBDataset1'
+          DataSetName = 'frxDBDatasetOrtu'
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clBlack
           Font.Height = -13

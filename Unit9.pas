@@ -30,7 +30,9 @@ type
     dbgrd1: TDBGrid;
     cbb3: TComboBox;
     cbb4: TComboBox;
+    edt1: TEdit;
     procedure btn1Click(Sender: TObject);
+    procedure dbgrd1CellClick(Column: TColumn);
   private
     { Private declarations }
   public
@@ -39,6 +41,7 @@ type
 
 var
   Form9: TForm9;
+  id:string;
 
 implementation
 
@@ -52,6 +55,30 @@ begin
     zqry1.Open;
     ShowMessage('DATA BERHASIL DI TAMPILKAN');
   end;
+end;
+
+procedure TForm9.dbgrd1CellClick(Column: TColumn);
+begin
+  id:= zqry1.Fields[0].AsString;
+  edt1.Text:= zqry1.Fields[1].AsString;
+  edt1.Text:= zqry1.Fields[2].AsString;
+  edt1.Text:= zqry1.Fields[3].AsString;
+  edt1.Text:= zqry1.Fields[4].AsString;
+  edt1.Text:= zqry1.Fields[5].AsString;
+  edt1.Text:= zqry1.Fields[8].AsString;
+  edt1.Text:= zqry1.Fields[9].AsString;
+  edt1.Text:= zqry1.Fields[10].AsString;
+  edt1.Text:= zqry1.Fields[11].AsString;
+  edt1.Text:= zqry1.Fields[12].AsString;
+  edt1.Text:= zqry1.Fields[13].AsString;
+
+  edt1.Enabled:= True;
+
+  btn1.Enabled:= false;
+  btn2.Enabled:= False;
+  btn3.Enabled:= True;
+  btn4.Enabled:= True;
+  btn5.Enabled:= True;
 end;
 
 end.

@@ -94,8 +94,8 @@ object Form6: TForm6
     ParentFont = False
   end
   object btn1: TButton
-    Left = 58
-    Top = 196
+    Left = 13
+    Top = 206
     Width = 100
     Height = 55
     Caption = 'BARU'
@@ -103,8 +103,8 @@ object Form6: TForm6
     OnClick = btn1Click
   end
   object btn2: TButton
-    Left = 201
-    Top = 194
+    Left = 156
+    Top = 204
     Width = 100
     Height = 55
     Caption = 'SIMPAN'
@@ -112,8 +112,8 @@ object Form6: TForm6
     OnClick = btn2Click
   end
   object btn3: TButton
-    Left = 345
-    Top = 195
+    Left = 300
+    Top = 205
     Width = 100
     Height = 55
     Caption = 'UBAH'
@@ -121,8 +121,8 @@ object Form6: TForm6
     OnClick = btn3Click
   end
   object btn4: TButton
-    Left = 484
-    Top = 195
+    Left = 439
+    Top = 205
     Width = 100
     Height = 55
     Caption = 'HAPUS'
@@ -130,8 +130,8 @@ object Form6: TForm6
     OnClick = btn4Click
   end
   object btn5: TButton
-    Left = 627
-    Top = 195
+    Left = 582
+    Top = 204
     Width = 100
     Height = 55
     Caption = 'BATAL'
@@ -139,8 +139,8 @@ object Form6: TForm6
     OnClick = btn5Click
   end
   object dbgrd1: TDBGrid
-    Left = 17
-    Top = 277
+    Left = 15
+    Top = 275
     Width = 838
     Height = 240
     DataSource = ds1
@@ -193,6 +193,15 @@ object Form6: TForm6
       'E'
       'F')
   end
+  object btn6: TButton
+    Left = 715
+    Top = 207
+    Width = 100
+    Height = 55
+    Caption = 'VIEW REPORT'
+    TabOrder = 9
+    OnClick = btn6Click
+  end
   object zqry1: TZQuery
     Connection = con1
     CachedUpdates = True
@@ -200,8 +209,8 @@ object Form6: TForm6
     SQL.Strings = (
       'select * from kelas')
     Params = <>
-    Left = 809
-    Top = 129
+    Left = 148
+    Top = 75
   end
   object con1: TZConnection
     ControlsCodePage = cGET_ACP
@@ -216,12 +225,293 @@ object Form6: TForm6
     LibraryLocation = 
       'C:\Program Files (x86)\Borland\Delphi7\Projects\Tugas UAS Visual' +
       '2\libmysql.dll'
-    Left = 809
-    Top = 84
+    Left = 131
+    Top = 108
   end
   object ds1: TDataSource
     DataSet = zqry1
-    Left = 810
-    Top = 174
+    Left = 178
+    Top = 105
+  end
+  object frxdbdtst1: TfrxDBDataset
+    UserName = 'frxDBDataset1'
+    CloseDataSource = False
+    DataSet = zqry1
+    BCDToCurrency = False
+    Left = 130
+    Top = 151
+  end
+  object frxrprt1: TfrxReport
+    Version = '6.9.15'
+    DotMatrixReport = False
+    IniFile = '\Software\Fast Reports'
+    PreviewOptions.Buttons = [pbPrint, pbLoad, pbSave, pbExport, pbZoom, pbFind, pbOutline, pbPageSetup, pbTools, pbEdit, pbNavigator, pbExportQuick, pbCopy, pbSelection]
+    PreviewOptions.Zoom = 1.000000000000000000
+    PrintOptions.Printer = #199#225#197#221#202#209#199#214#237
+    PrintOptions.PrintOnSheet = 0
+    ReportOptions.CreateDate = 45075.558876076400000000
+    ReportOptions.LastChange = 45112.504672210600000000
+    ScriptLanguage = 'PascalScript'
+    ScriptText.Strings = (
+      'begin'
+      ''
+      'end.')
+    Left = 186
+    Top = 155
+    Datasets = <
+      item
+        DataSet = frxdbdtst1
+        DataSetName = 'frxDBDataset1'
+      end>
+    Variables = <>
+    Style = <>
+    object Data: TfrxDataPage
+      Height = 1000.000000000000000000
+      Width = 1000.000000000000000000
+    end
+    object Page1: TfrxReportPage
+      PaperWidth = 215.900000000000000000
+      PaperHeight = 279.400000000000000000
+      PaperSize = 1
+      LeftMargin = 10.000000000000000000
+      RightMargin = 10.000000000000000000
+      TopMargin = 10.000000000000000000
+      BottomMargin = 10.000000000000000000
+      Frame.Typ = []
+      MirrorMode = []
+      object ReportTitle1: TfrxReportTitle
+        FillType = ftBrush
+        FillGap.Top = 0
+        FillGap.Left = 0
+        FillGap.Bottom = 0
+        FillGap.Right = 0
+        Frame.Typ = []
+        Height = 94.488250000000000000
+        Top = 18.897650000000000000
+        Width = 740.409927000000000000
+        object Memo13: TfrxMemoView
+          AllowVectorExport = True
+          Left = 188.976500000000000000
+          Width = 377.953000000000000000
+          Height = 68.031540000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -19
+          Font.Name = 'Arial'
+          Font.Style = [fsBold]
+          Frame.Typ = []
+          Frame.Width = 1.500000000000000000
+          HAlign = haCenter
+          Memo.UTF8 = (
+            'LAPORAN DATA KELAS')
+          ParentFont = False
+          VAlign = vaCenter
+        end
+      end
+      object MasterData1: TfrxMasterData
+        FillType = ftBrush
+        FillGap.Top = 0
+        FillGap.Left = 0
+        FillGap.Bottom = 0
+        FillGap.Right = 0
+        Frame.Typ = []
+        Height = 45.354360000000000000
+        Top = 241.889920000000000000
+        Width = 740.409927000000000000
+        DataSet = frxdbdtst1
+        DataSetName = 'frxDBDataset1'
+        RowCount = 0
+        object Memo6: TfrxMemoView
+          AllowVectorExport = True
+          Left = 128.504020000000000000
+          Width = 37.795300000000000000
+          Height = 45.354360000000000000
+          DataSet = frxdbdtst1
+          DataSetName = 'frxDBDataset1'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = []
+          Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+          Frame.Width = 1.500000000000000000
+          HAlign = haCenter
+          Memo.UTF8 = (
+            '[line]')
+          ParentFont = False
+          VAlign = vaCenter
+        end
+        object Memo7: TfrxMemoView
+          AllowVectorExport = True
+          Left = 166.299320000000000000
+          Width = 139.842610000000000000
+          Height = 45.354360000000000000
+          DataField = 'nama_kelas'
+          DataSet = frxdbdtst1
+          DataSetName = 'frxDBDataset1'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = []
+          Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+          Frame.Width = 1.500000000000000000
+          HAlign = haCenter
+          Memo.UTF8 = (
+            '[frxDBDataset1."nama_kelas"]')
+          ParentFont = False
+          VAlign = vaCenter
+        end
+        object Memo8: TfrxMemoView
+          AllowVectorExport = True
+          Left = 411.968770000000000000
+          Width = 207.874150000000000000
+          Height = 45.354360000000000000
+          DataField = 'jurusan'
+          DataSet = frxdbdtst1
+          DataSetName = 'frxDBDataset1'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = []
+          Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+          Frame.Width = 1.500000000000000000
+          HAlign = haCenter
+          Memo.UTF8 = (
+            '[frxDBDataset1."jurusan"]')
+          ParentFont = False
+          VAlign = vaCenter
+        end
+        object Memo11: TfrxMemoView
+          AllowVectorExport = True
+          Left = 306.141930000000000000
+          Width = 105.826840000000000000
+          Height = 45.354360000000000000
+          DataField = 'jenis'
+          DataSet = frxdbdtst1
+          DataSetName = 'frxDBDataset1'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = []
+          Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+          Frame.Width = 1.500000000000000000
+          HAlign = haCenter
+          Memo.UTF8 = (
+            '[frxDBDataset1."jenis"]')
+          ParentFont = False
+          VAlign = vaCenter
+        end
+      end
+      object PageHeader1: TfrxPageHeader
+        FillType = ftBrush
+        FillGap.Top = 0
+        FillGap.Left = 0
+        FillGap.Bottom = 0
+        FillGap.Right = 0
+        Frame.Typ = []
+        Height = 45.354360000000000000
+        Top = 136.063080000000000000
+        Width = 740.409927000000000000
+        object Memo1: TfrxMemoView
+          AllowVectorExport = True
+          Left = 128.504020000000000000
+          Width = 37.795300000000000000
+          Height = 45.354360000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = [fsBold]
+          Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+          Frame.Width = 1.500000000000000000
+          HAlign = haCenter
+          Memo.UTF8 = (
+            'No')
+          ParentFont = False
+          VAlign = vaCenter
+        end
+        object Memo2: TfrxMemoView
+          AllowVectorExport = True
+          Left = 166.299320000000000000
+          Width = 139.842610000000000000
+          Height = 45.354360000000000000
+          DataSet = frxdbdtst1
+          DataSetName = 'frxDBDataset1'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = [fsBold]
+          Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+          Frame.Width = 1.500000000000000000
+          HAlign = haCenter
+          Memo.UTF8 = (
+            'NAMA KELAS')
+          ParentFont = False
+          VAlign = vaCenter
+        end
+        object Memo3: TfrxMemoView
+          AllowVectorExport = True
+          Left = 411.968770000000000000
+          Width = 207.874150000000000000
+          Height = 45.354360000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = [fsBold]
+          Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+          Frame.Width = 1.500000000000000000
+          HAlign = haCenter
+          Memo.UTF8 = (
+            'JURUSAN KELAS')
+          ParentFont = False
+          VAlign = vaCenter
+        end
+        object Memo12: TfrxMemoView
+          AllowVectorExport = True
+          Left = 306.141930000000000000
+          Width = 105.826840000000000000
+          Height = 45.354360000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = [fsBold]
+          Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+          Frame.Width = 1.500000000000000000
+          HAlign = haCenter
+          Memo.UTF8 = (
+            'JENIS KELAS')
+          ParentFont = False
+          VAlign = vaCenter
+        end
+      end
+      object PageFooter1: TfrxPageFooter
+        FillType = ftBrush
+        FillGap.Top = 0
+        FillGap.Left = 0
+        FillGap.Bottom = 0
+        FillGap.Right = 0
+        Frame.Typ = []
+        Height = 52.913420000000000000
+        Top = 393.071120000000000000
+        Width = 740.409927000000000000
+      end
+      object Footer1: TfrxFooter
+        FillType = ftBrush
+        FillGap.Top = 0
+        FillGap.Left = 0
+        FillGap.Bottom = 0
+        FillGap.Right = 0
+        Frame.Typ = []
+        Height = 22.677180000000000000
+        Top = 309.921460000000000000
+        Width = 740.409927000000000000
+      end
+    end
   end
 end

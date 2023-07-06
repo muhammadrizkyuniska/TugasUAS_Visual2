@@ -68,55 +68,46 @@ end;
 
 procedure TForm10.DAFTAR1Click(Sender: TObject);
 begin
-  Hide;
   Form11.ShowModal;
 end;
 
 procedure TForm10.SISWA2Click(Sender: TObject);
 begin
-  Hide;
   Form1.ShowModal;
 end;
 
 procedure TForm10.ORANGTUA1Click(Sender: TObject);
 begin
-  Hide;
   form2.ShowModal;
 end;
 
 procedure TForm10.HUBUNGAN1Click(Sender: TObject);
 begin
-  Hide;
   Form4.ShowModal;
 end;
 
 procedure TForm10.WALIKELAS1Click(Sender: TObject);
 begin
-  Hide;
   Form3.ShowModal;
 end;
 
 procedure TForm10.KELAS1Click(Sender: TObject);
 begin
-  Hide;
   Form6.ShowModal;
 end;
 
 procedure TForm10.POIBN1Click(Sender: TObject);
 begin
-  Hide;
   form5.ShowModal;
 end;
 
 procedure TForm10.RIWAYATPOIN1Click(Sender: TObject);
 begin
-  Hide;
   Form7.ShowModal;
 end;
 
 procedure TForm10.USER1Click(Sender: TObject);
 begin
-  Hide;
   Form11.ShowModal;
 end;
 

@@ -36,6 +36,7 @@ type
     procedure FormShow(Sender: TObject);
     procedure btn2Click(Sender: TObject);
     procedure btn3Click(Sender: TObject);
+    procedure btn4Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -67,8 +68,55 @@ begin
     zqry1.SQL.Text := 'SELECT * FROM ' + cbb1.Text;
     zqry1.Open;
 
+    if cbb1.Text='siswa' then
+    begin
+      cbb2.Items.Add(zqry1.Fields[3].FieldName);
+    end else
+    if cbb1.Text='orang_tua' then
+    begin
+      cbb2.Items.Add(zqry1.Fields[2].FieldName);
+    end else
+    if cbb1.Text='hubungan' then
     begin
       cbb2.Items.Add(zqry1.Fields[1].FieldName);
+      cbb2.Items.Add(zqry1.Fields[2].FieldName);
+      cbb2.Items.Add(zqry1.Fields[3].FieldName);
+      cbb2.Items.Add(zqry1.Fields[4].FieldName);
+    end else
+    if cbb1.Text='poin' then
+    begin
+      cbb2.Items.Add(zqry1.Fields[1].FieldName);
+      cbb2.Items.Add(zqry1.Fields[2].FieldName);
+      cbb2.Items.Add(zqry1.Fields[3].FieldName);
+      cbb2.Items.Add(zqry1.Fields[4].FieldName);
+    end else
+    if cbb1.Text='kelas' then
+    begin
+      cbb2.Items.Add(zqry1.Fields[1].FieldName);
+      cbb2.Items.Add(zqry1.Fields[2].FieldName);
+      cbb2.Items.Add(zqry1.Fields[3].FieldName);
+    end else
+    if cbb1.Text='wali_kelas' then
+    begin
+      cbb2.Items.Add(zqry1.Fields[2].FieldName);
+    end else
+    if cbb1.Text='riwayat_poin' then
+    begin
+      cbb2.Items.Add(zqry1.Fields[1].FieldName);
+      cbb2.Items.Add(zqry1.Fields[2].FieldName);
+      cbb2.Items.Add(zqry1.Fields[3].FieldName);
+      cbb2.Items.Add(zqry1.Fields[4].FieldName);
+      cbb2.Items.Add(zqry1.Fields[5].FieldName);
+      cbb2.Items.Add(zqry1.Fields[6].FieldName);
+      cbb2.Items.Add(zqry1.Fields[7].FieldName);
+      cbb2.Items.Add(zqry1.Fields[8].FieldName);
+    end else
+    if cbb1.Text='user' then
+    begin
+      cbb2.Items.Add(zqry1.Fields[1].FieldName);
+      cbb2.Items.Add(zqry1.Fields[2].FieldName);
+      cbb2.Items.Add(zqry1.Fields[3].FieldName);
+      cbb2.Items.Add(zqry1.Fields[4].FieldName);
     end;
   end;
 end;
@@ -146,7 +194,6 @@ begin
     dbgrd1.Columns[13].Width := 80;
     dbgrd1.Columns[14].Width := 80;
   end;
-  
 end;
 
 procedure TForm9.bersih;
@@ -157,4 +204,12 @@ begin
   edt1.clear;
 
 end;
+procedure TForm9.btn4Click(Sender: TObject);
+begin
+  posisiawal;
+  zqry1.SQL.Clear;
+  zqry1.SQL.Add('SHOW TABLES');
+  zqry1.Open;
+end;
+
 end.

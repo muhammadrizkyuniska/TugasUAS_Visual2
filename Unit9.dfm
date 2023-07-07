@@ -1,6 +1,6 @@
 object Form9: TForm9
-  Left = 268
-  Top = 139
+  Left = 716
+  Top = 23
   Width = 770
   Height = 549
   Caption = 'QUERY'
@@ -152,6 +152,7 @@ object Form9: TForm9
     Height = 55
     Caption = 'BATAL'
     TabOrder = 6
+    OnClick = btn4Click
   end
   object cbb1: TComboBox
     Left = 116

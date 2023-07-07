@@ -21,7 +21,6 @@ type
     btn2: TButton;
     btn3: TButton;
     btn4: TButton;
-    btn5: TButton;
     cbb1: TComboBox;
     cbb2: TComboBox;
     zqry1: TZQuery;
@@ -29,10 +28,14 @@ type
     ds1: TDataSource;
     dbgrd1: TDBGrid;
     cbb3: TComboBox;
-    cbb4: TComboBox;
     edt1: TEdit;
     procedure btn1Click(Sender: TObject);
-    procedure dbgrd1CellClick(Column: TColumn);
+    procedure cbb1Change(Sender: TObject);
+    procedure bersih;
+    procedure posisiawal;
+    procedure FormShow(Sender: TObject);
+    procedure btn2Click(Sender: TObject);
+    procedure btn3Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -41,7 +44,6 @@ type
 
 var
   Form9: TForm9;
-  id:string;
 
 implementation
 
@@ -57,28 +59,102 @@ begin
   end;
 end;
 
-procedure TForm9.dbgrd1CellClick(Column: TColumn);
+procedure TForm9.cbb1Change(Sender: TObject);
 begin
-  id:= zqry1.Fields[0].AsString;
-  edt1.Text:= zqry1.Fields[1].AsString;
-  edt1.Text:= zqry1.Fields[2].AsString;
-  edt1.Text:= zqry1.Fields[3].AsString;
-  edt1.Text:= zqry1.Fields[4].AsString;
-  edt1.Text:= zqry1.Fields[5].AsString;
-  edt1.Text:= zqry1.Fields[8].AsString;
-  edt1.Text:= zqry1.Fields[9].AsString;
-  edt1.Text:= zqry1.Fields[10].AsString;
-  edt1.Text:= zqry1.Fields[11].AsString;
-  edt1.Text:= zqry1.Fields[12].AsString;
-  edt1.Text:= zqry1.Fields[13].AsString;
+  if cbb1.ItemIndex >= 0 then
+  begin
+    zqry1.SQL.Clear;
+    zqry1.SQL.Text := 'SELECT * FROM ' + cbb1.Text;
+    zqry1.Open;
 
-  edt1.Enabled:= True;
-
-  btn1.Enabled:= false;
-  btn2.Enabled:= False;
-  btn3.Enabled:= True;
-  btn4.Enabled:= True;
-  btn5.Enabled:= True;
+    begin
+      cbb2.Items.Add(zqry1.Fields[1].FieldName);
+    end;
+  end;
 end;
 
+procedure TForm9.FormShow(Sender: TObject);
+begin
+  posisiawal;
+end;
+
+procedure TForm9.btn2Click(Sender: TObject);
+begin
+  zqry1.SQL.Clear;
+  zqry1.SQL.Add('SELECT * FROM '+cbb1.Text+' WHERE '+cbb2.Text+' = "'+edt1.Text+'"');
+  zqry1.Open;
+end;
+
+procedure TForm9.btn3Click(Sender: TObject);
+begin
+  if cbb3.Text='a%' then
+  begin
+    zqry1.SQL.Clear;
+    zqry1.SQL.Add('SELECT * FROM '+cbb1.Text+' WHERE '+cbb2.Text+' LIKE "'+edt1.Text+'%"');
+    zqry1.Open;
+  end else
+  if cbb3.Text='%a' then
+  begin
+    zqry1.SQL.Clear;
+    zqry1.SQL.Add('SELECT * FROM '+cbb1.Text+' WHERE '+cbb2.Text+' LIKE "%'+edt1.Text+'"');
+    zqry1.Open;
+  end else
+  if cbb3.Text='%or%' then
+  begin
+    zqry1.SQL.Clear;
+    zqry1.SQL.Add('SELECT * FROM '+cbb1.Text+' WHERE '+cbb2.Text+' LIKE "%'+edt1.Text+'%"');
+    zqry1.Open;
+  end else
+  if cbb3.Text='_r%' then
+  begin
+    zqry1.SQL.Clear;
+    zqry1.SQL.Add('SELECT * FROM '+cbb1.Text+' WHERE '+cbb2.Text+' LIKE "_'+edt1.Text+'%"');
+    zqry1.Open;
+  end else
+  if cbb3.Text='a__%' then
+  begin
+    zqry1.SQL.Clear;
+    zqry1.SQL.Add('SELECT * FROM '+cbb1.Text+' WHERE '+cbb2.Text+' LIKE "'+edt1.Text+'__%"');
+    zqry1.Open;
+  end else
+  if cbb3.Text='NOT LIKE a%' then
+  begin
+    zqry1.SQL.Clear;
+    zqry1.SQL.Add('SELECT * FROM '+cbb1.Text+' WHERE '+cbb2.Text+' NOT LIKE "'+edt1.Text+'%"');
+    zqry1.Open;
+  end;
+end;
+
+procedure TForm9.posisiawal;
+begin
+  bersih;
+  if cbb1.Text='siswa'then
+  begin
+    dbgrd1.Columns[0].Width := 45;
+    dbgrd1.Columns[1].Width := 45;
+    dbgrd1.Columns[2].Width := 80;
+    dbgrd1.Columns[3].Width := 90;
+    dbgrd1.Columns[4].Width := 100;
+    dbgrd1.Columns[5].Width := 95;
+    dbgrd1.Columns[6].Width := 70;
+    dbgrd1.Columns[7].Width := 80;
+    dbgrd1.Columns[8].Width := 40;
+    dbgrd1.Columns[9].Width := 80;
+    dbgrd1.Columns[10].Width := 60;
+    dbgrd1.Columns[11].Width := 90;
+    dbgrd1.Columns[12].Width := 80;
+    dbgrd1.Columns[13].Width := 80;
+    dbgrd1.Columns[14].Width := 80;
+  end;
+  
+end;
+
+procedure TForm9.bersih;
+begin
+  cbb1.Text:='';
+  cbb2.Text:='';
+  cbb3.Text:='';
+  edt1.clear;
+
+end;
 end.

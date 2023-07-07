@@ -34,6 +34,8 @@ var
 
 implementation
 
+uses Unit10;
+
 {$R *.dfm}
 
 procedure TForm8.btn2Click(Sender: TObject);
@@ -45,7 +47,7 @@ begin
   if zqry1.RecordCount > 0 then
   begin
     ShowMessage('Login Berhasil');
-
+    Form10.Show;
   end else
   if (edt1.Text='')or (edt2.Text='') then
   begin

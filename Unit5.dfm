@@ -282,8 +282,8 @@ object Form5: TForm5
     User = 'root'
     Protocol = 'mysql'
     LibraryLocation = 
-      'C:\Program Files (x86)\Borland\Delphi7\Projects\Tugas UAS Visual' +
-      '2\libmysql.dll'
+      'C:\Program Files (x86)\Borland\Delphi7\Projects\New folder (2)\T' +
+      'ugas UAS Visual2\libmysql.dll'
     Left = 681
     Top = 24
   end
@@ -299,8 +299,8 @@ object Form5: TForm5
     SQL.Strings = (
       'SELECT * FROM poin WHERE jenis LIKE '#39'prestasi'#39';')
     Params = <>
-    Left = 753
-    Top = 504
+    Left = 750
+    Top = 506
   end
   object ds2: TDataSource
     DataSet = zqry2
@@ -315,7 +315,7 @@ object Form5: TForm5
       'SELECT * FROM poin WHERE jenis LIKE '#39'pelanggaran'#39';')
     Params = <>
     Left = 763
-    Top = 759
+    Top = 760
   end
   object ds3: TDataSource
     DataSet = zqry3

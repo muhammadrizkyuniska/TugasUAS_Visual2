@@ -412,8 +412,8 @@ object Form3: TForm3
     User = 'root'
     Protocol = 'mysql'
     LibraryLocation = 
-      'C:\Program Files (x86)\Borland\Delphi7\Projects\Tugas UAS Visual' +
-      '2\libmysql.dll'
+      'C:\Program Files (x86)\Borland\Delphi7\Projects\New folder (2)\T' +
+      'ugas UAS Visual2\libmysql.dll'
     Left = 755
     Top = 34
   end

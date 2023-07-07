@@ -74,8 +74,6 @@ type
     procedure posisiawal;
     procedure bersih;
     procedure btn6Click(Sender: TObject);
-    procedure frxrprt1ClickObject(View: TfrxView; Button: TMouseButton;
-      Shift: TShiftState; var Modified: Boolean);
   private
     { Private declarations }
   public
@@ -272,7 +270,7 @@ begin
   begin
     zqry1.SQL.Clear;
     zqry1.SQL.Add(' delete from siswa where id="'+id+'"');
-    zqry1. ExecSQL;
+    zqry1.ExecSQL;
 
     zqry1.SQL.Clear;
     zqry1.SQL.Add('select * from siswa');
@@ -358,19 +356,6 @@ end;
 procedure TForm1.btn6Click(Sender: TObject);
 begin
   frxrprt1.ShowReport();
-end;
-
-procedure TForm1.frxrprt1ClickObject(View: TfrxView;
-  Button: TMouseButton; Shift: TShiftState; var Modified: Boolean);
-begin
-  if View.Name ='Memo7' then
-  begin
-     Form4.zqry2.SQL.Clear;
-     Form4.zqry2.SQL.Add('select * from siswa where nama_siswa="'+View.TagStr+'"');
-     Form4.zqry2.Open;
-
-     Form4.frxrprt1.ShowReport();
-  end;
 end;
 
 end.

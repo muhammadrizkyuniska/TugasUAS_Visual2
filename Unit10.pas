@@ -27,6 +27,7 @@ type
     lbl1: TLabel;
     lbl2: TLabel;
     btn1: TButton;
+    QUERYJOIN1: TMenuItem;
     procedure LOGOUT1Click(Sender: TObject);
     procedure LOGIN1Click(Sender: TObject);
     procedure DAFTAR1Click(Sender: TObject);
@@ -40,6 +41,7 @@ type
     procedure USER1Click(Sender: TObject);
     procedure DAFTARQUERY1Click(Sender: TObject);
     procedure btn1Click(Sender: TObject);
+    procedure QUERYJOIN1Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -51,24 +53,23 @@ var
 
 implementation
 
-uses Unit1, Unit2, Unit3, Unit4, Unit5, Unit6, Unit7,Unit8, Unit9, Unit11;
+uses Unit1, Unit2, Unit3, Unit4, Unit5, Unit6, Unit7,Unit8, Unit9, Unit11, Unit12;
 
 {$R *.dfm}
 
 procedure TForm10.LOGOUT1Click(Sender: TObject);
 begin
-  close;
+  Form8.ShowModal;
 end;
 
 procedure TForm10.LOGIN1Click(Sender: TObject);
 begin
-  Hide;
   form8.ShowModal;
 end;
 
 procedure TForm10.DAFTAR1Click(Sender: TObject);
 begin
-  Form11.ShowModal;
+  Form11.ShowModal; Form11.Close;
 end;
 
 procedure TForm10.SISWA2Click(Sender: TObject);
@@ -113,14 +114,17 @@ end;
 
 procedure TForm10.DAFTARQUERY1Click(Sender: TObject);
 begin
-  Hide;
   form9.ShowModal;
 end;
 
 procedure TForm10.btn1Click(Sender: TObject);
 begin
-  Hide;
-  Form8.ShowModal;
+  Form8.Show;
+end;
+
+procedure TForm10.QUERYJOIN1Click(Sender: TObject);
+begin
+  Form12.ShowModal
 end;
 
 end.

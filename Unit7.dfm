@@ -423,8 +423,8 @@ object Form7: TForm7
     User = 'root'
     Protocol = 'mysql'
     LibraryLocation = 
-      'C:\Program Files (x86)\Borland\Delphi7\Projects\Tugas UAS Visual' +
-      '2\libmysql.dll'
+      'C:\Program Files (x86)\Borland\Delphi7\Projects\New folder (2)\T' +
+      'ugas UAS Visual2\libmysql.dll'
     Left = 784
     Top = 21
   end
@@ -449,7 +449,7 @@ object Form7: TForm7
         ' ON riwayat_poin.kelas_id = kelas.id)')
     Params = <>
     Left = 858
-    Top = 26
+    Top = 27
   end
   object ds2: TDataSource
     DataSet = zqry2

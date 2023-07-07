@@ -1,6 +1,6 @@
 object Form10: TForm10
-  Left = 192
-  Top = 139
+  Left = 485
+  Top = 413
   Width = 1305
   Height = 673
   Caption = 'MAIN MENU'
@@ -115,8 +115,12 @@ object Form10: TForm10
     object QUERYMYSQL1: TMenuItem
       Caption = 'QUERY MYSQL'
       object DAFTARQUERY1: TMenuItem
-        Caption = 'DAFTAR QUERY'
+        Caption = 'QUERY'
         OnClick = DAFTARQUERY1Click
+      end
+      object QUERYJOIN1: TMenuItem
+        Caption = 'QUERY JOIN'
+        OnClick = QUERYJOIN1Click
       end
     end
   end

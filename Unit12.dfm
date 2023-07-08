@@ -1,6 +1,6 @@
 object Form12: TForm12
-  Left = 228
-  Top = 119
+  Left = 740
+  Top = 144
   Width = 732
   Height = 652
   Caption = 'QUERY JOIN'
@@ -217,19 +217,21 @@ object Form12: TForm12
   end
   object btn3: TButton
     Left = 300
-    Top = 259
+    Top = 260
     Width = 100
     Height = 55
-    Caption = 'UBAH'
+    Caption = 'RIGHT JOIN'
     TabOrder = 2
+    OnClick = btn3Click
   end
   object btn4: TButton
     Left = 439
     Top = 259
     Width = 100
     Height = 55
-    Caption = 'HAPUS'
+    Caption = 'CROSS JOIN'
     TabOrder = 3
+    OnClick = btn4Click
   end
   object btn5: TButton
     Left = 578
@@ -259,7 +261,8 @@ object Form12: TForm12
     Height = 21
     ItemHeight = 13
     TabOrder = 6
-    OnSelect = cbb2Select
+    Items.Strings = (
+      'nama_siswa')
   end
   object dbgrd1: TDBGrid
     Left = 10
@@ -281,7 +284,8 @@ object Form12: TForm12
     Height = 21
     ItemHeight = 13
     TabOrder = 8
-    OnSelect = cbb3Select
+    Items.Strings = (
+      'nama_ortu')
   end
   object cbb4: TComboBox
     Left = 141
@@ -290,7 +294,8 @@ object Form12: TForm12
     Height = 21
     ItemHeight = 13
     TabOrder = 9
-    OnSelect = cbb4Select
+    Items.Strings = (
+      'nama_wali')
   end
   object edt1: TEdit
     Left = 140
@@ -306,7 +311,8 @@ object Form12: TForm12
     Height = 21
     ItemHeight = 13
     TabOrder = 11
-    OnSelect = cbb5Select
+    Items.Strings = (
+      'nama_kelas')
   end
   object cbb6: TComboBox
     Left = 142
@@ -315,7 +321,8 @@ object Form12: TForm12
     Height = 21
     ItemHeight = 13
     TabOrder = 12
-    OnSelect = cbb6Select
+    Items.Strings = (
+      'nama')
   end
   object edt2: TEdit
     Left = 388

@@ -50,11 +50,8 @@ type
     procedure bersih;
     procedure posisiawal;
     procedure btn1Click(Sender: TObject);
-    procedure cbb2Select(Sender: TObject);
-    procedure cbb3Select(Sender: TObject);
-    procedure cbb4Select(Sender: TObject);
-    procedure cbb5Select(Sender: TObject);
-    procedure cbb6Select(Sender: TObject);
+    procedure btn3Click(Sender: TObject);
+    procedure btn4Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -116,65 +113,24 @@ procedure TForm12.btn2Click(Sender: TObject);
 begin
   if cbb1.Text = 'hubungan' then
   begin
-    if cbb2.ItemIndex >= 0 then
-    begin
-      zqry1.SQL.Clear;
-      zqry1.SQL.Add('SELECT hubungan.id, siswa.'+cbb2.Text+'');
-      zqry1.SQL.Add('FROM hubungan');
-      zqry1.SQL.Add('LEFT JOIN siswa ON hubungan.siswa_id = siswa.id');
-      zqry1.Open;
-    end else
-    if cbb3.ItemIndex >= 0 then
-    begin
-      zqry1.SQL.Clear;
-      zqry1.SQL.Add('SELECT hubungan.id, orang_tua.'+cbb3.Text+'');
-      zqry1.SQL.Add('FROM hubungan');
-      zqry1.SQL.Add('LEFT JOIN orang_tua ON hubungan.ortu_id = orang_tua.id');
-      zqry1.Open;
-    end;
+    zqry1.SQL.Clear;
+    zqry1.SQL.Add('SELECT hubungan.id, siswa.'+cbb2.Text+',orang_tua.'+cbb3.Text+'');
+    zqry1.SQL.Add('FROM hubungan');
+    zqry1.SQL.Add('LEFT JOIN siswa ON hubungan.siswa_id = siswa.id');
+    zqry1.SQL.Add('LEFT JOIN orang_tua ON hubungan.ortu_id = orang_tua.id');
+    zqry1.Open;
   end else
   if cbb1.Text = 'riwayat_poin' then
   begin
-    if cbb2.ItemIndex >= 0 then
-    begin
-      zqry1.SQL.Clear;
-      zqry1.SQL.Add('SELECT riwayat_poin.id, siswa.'+cbb2.Text+'');
-      zqry1.SQL.Add('FROM riwayat_poin');
-      zqry1.SQL.Add('LEFT JOIN siswa ON riwayat_poin.siswa_id = siswa.id');
-      zqry1.Open;
-    end else
-    if cbb3.ItemIndex >= 0 then
-    begin
-      zqry1.SQL.Clear;
-      zqry1.SQL.Add('SELECT riwayat_poin.id, poin.'+cbb3.Text+'');
-      zqry1.SQL.Add('FROM riwayat_poin');
-      zqry1.SQL.Add('LEFT JOIN poin ON riwayat_poin.poin_id = poin.id');
-      zqry1.Open;
-    end else
-    if cbb4.ItemIndex >= 0 then
-    begin
-      zqry1.SQL.Clear;
-      zqry1.SQL.Add('SELECT riwayat_poin.id, wali_kelas.'+cbb4.Text+'');
-      zqry1.SQL.Add('FROM riwayat_poin');
-      zqry1.SQL.Add('LEFT JOIN wali_kelas ON riwayat_poin.wali_id = wali_kelas.id');
-      zqry1.Open;
-    end else
-    if cbb5.ItemIndex >= 0 then
-    begin
-      zqry1.SQL.Clear;
-      zqry1.SQL.Add('SELECT riwayat_poin.id, orang_tua.'+cbb5.Text+'');
-      zqry1.SQL.Add('FROM riwayat_poin');
-      zqry1.SQL.Add('LEFT JOIN orang_tua ON riwayat_poin.ortu_id = orang_tua.id');
-      zqry1.Open;
-    end else
-    if cbb6.ItemIndex >= 0 then
-    begin
-      zqry1.SQL.Clear;
-      zqry1.SQL.Add('SELECT riwayat_poin.id, kelas.'+cbb6.Text+'');
-      zqry1.SQL.Add('FROM riwayat_poin');
-      zqry1.SQL.Add('LEFT JOIN kelas ON riwayat_poin.kelas_id = kelas.id');
-      zqry1.Open;
-    end;
+    zqry1.SQL.Clear;
+    zqry1.SQL.Add('SELECT riwayat_poin.id, siswa.'+cbb2.Text+', orang_tua.'+cbb3.Text+', wali_kelas.'+cbb4.Text+', kelas.'+cbb5.Text+', poin.'+cbb6.Text+'');
+    zqry1.SQL.Add('FROM riwayat_poin');
+    zqry1.SQL.Add('LEFT JOIN siswa ON riwayat_poin.siswa_id = siswa.id');
+    zqry1.SQL.Add('LEFT JOIN orang_tua ON riwayat_poin.ortu_id = orang_tua.id');
+    zqry1.SQL.Add('LEFT JOIN poin ON riwayat_poin.poin_id = poin.id');
+    zqry1.SQL.Add('LEFT JOIN wali_kelas ON riwayat_poin.wali_id = wali_kelas.id');
+    zqry1.SQL.Add('LEFT JOIN kelas ON riwayat_poin.kelas_id = kelas.id');
+    zqry1.Open;
   end;
 end;
 
@@ -234,8 +190,8 @@ begin
   if cbb1.Text = 'riwayat_poin' then
   begin
     zqry1.SQL.Clear;
-    zqry1.SQL.Add('SELECT riwayat_poin.id, siswa.'+cbb2.Text+', orang_tua.'+cbb3.Text+'');
-    zqry1.SQL.Add('FROM hubungan');
+    zqry1.SQL.Add('SELECT riwayat_poin.id, siswa.'+cbb2.Text+', orang_tua.'+cbb3.Text+', wali_kelas.'+cbb4.Text+', kelas.'+cbb5.Text+', poin.'+cbb6.Text+'');
+    zqry1.SQL.Add('FROM riwayat_poin');
     zqry1.SQL.Add('INNER JOIN siswa ON riwayat_poin.siswa_id = siswa.id');
     zqry1.SQL.Add('INNER JOIN poin ON riwayat_poin.poin_id = poin.id');
     zqry1.SQL.Add('INNER JOIN wali_kelas ON riwayat_poin.wali_id = wali_kelas.id');
@@ -245,101 +201,53 @@ begin
   end;
 end;
 
-procedure TForm12.cbb2Select(Sender: TObject);
+procedure TForm12.btn3Click(Sender: TObject);
 begin
-  if cbb2.ItemIndex >= 0 then
+  if cbb1.Text = 'hubungan' then
   begin
     zqry1.SQL.Clear;
-    zqry1.SQL.Text:='select * from siswa';
+    zqry1.SQL.Add('SELECT hubungan.id, siswa.'+cbb2.Text+',orang_tua.'+cbb3.Text+'');
+    zqry1.SQL.Add('FROM hubungan');
+    zqry1.SQL.Add('RIGHT JOIN siswa ON hubungan.siswa_id = siswa.id');
+    zqry1.SQL.Add('RIGHT JOIN orang_tua ON hubungan.ortu_id = orang_tua.id');
     zqry1.Open;
-    begin
-      cbb2.Items.Add(zqry1.Fields[1].FieldName);
-      cbb2.Items.Add(zqry1.Fields[2].FieldName);
-      cbb2.Items.Add(zqry1.Fields[3].FieldName);
-      cbb2.Items.Add(zqry1.Fields[4].FieldName);
-      cbb2.Items.Add(zqry1.Fields[5].FieldName);
-      cbb2.Items.Add(zqry1.Fields[6].FieldName);
-      cbb2.Items.Add(zqry1.Fields[7].FieldName);
-      cbb2.Items.Add(zqry1.Fields[8].FieldName);
-      cbb2.Items.Add(zqry1.Fields[9].FieldName);
-      cbb2.Items.Add(zqry1.Fields[10].FieldName);
-      cbb2.Items.Add(zqry1.Fields[11].FieldName);
-      cbb2.Items.Add(zqry1.Fields[12].FieldName);
-      cbb2.Items.Add(zqry1.Fields[13].FieldName);
-      cbb2.Items.Add(zqry1.Fields[14].FieldName);
-    end;
+  end else
+  if cbb1.Text = 'riwayat_poin' then
+  begin
+    zqry1.SQL.Clear;
+    zqry1.SQL.Add('SELECT riwayat_poin.id, siswa.'+cbb2.Text+', orang_tua.'+cbb3.Text+', wali_kelas.'+cbb4.Text+', kelas.'+cbb5.Text+', poin.'+cbb6.Text+'');
+    zqry1.SQL.Add('FROM riwayat_poin');
+    zqry1.SQL.Add('RIGHT JOIN siswa ON riwayat_poin.siswa_id = siswa.id');
+    zqry1.SQL.Add('RIGHT JOIN orang_tua ON riwayat_poin.ortu_id = orang_tua.id');
+    zqry1.SQL.Add('RIGHT JOIN poin ON riwayat_poin.poin_id = poin.id');
+    zqry1.SQL.Add('RIGHT JOIN wali_kelas ON riwayat_poin.wali_id = wali_kelas.id');
+    zqry1.SQL.Add('RIGHT JOIN kelas ON riwayat_poin.kelas_id = kelas.id');
+    zqry1.Open;
   end;
 end;
 
-procedure TForm12.cbb3Select(Sender: TObject);
+procedure TForm12.btn4Click(Sender: TObject);
 begin
-  if cbb3.ItemIndex >= 0 then
+  if cbb1.Text = 'hubungan' then
   begin
     zqry1.SQL.Clear;
-    zqry1.SQL.Text:='select * from orang_tua';
+    zqry1.SQL.Add('SELECT hubungan.id, siswa.'+cbb2.Text+',orang_tua.'+cbb3.Text+'');
+    zqry1.SQL.Add('FROM hubungan');
+    zqry1.SQL.Add('CROSS JOIN siswa ON hubungan.siswa_id = siswa.id');
+    zqry1.SQL.Add('CROSS JOIN orang_tua ON hubungan.ortu_id = orang_tua.id');
     zqry1.Open;
-    begin
-      cbb3.Items.Add(zqry1.Fields[1].FieldName);
-      cbb3.Items.Add(zqry1.Fields[2].FieldName);
-      cbb3.Items.Add(zqry1.Fields[3].FieldName);
-      cbb3.Items.Add(zqry1.Fields[4].FieldName);
-      cbb3.Items.Add(zqry1.Fields[5].FieldName);
-      cbb3.Items.Add(zqry1.Fields[6].FieldName);
-      cbb3.Items.Add(zqry1.Fields[7].FieldName);
-      cbb3.Items.Add(zqry1.Fields[8].FieldName);
-      cbb3.Items.Add(zqry1.Fields[9].FieldName);
-    end;
-  end;
-end;
-
-procedure TForm12.cbb4Select(Sender: TObject);
-begin
-  if cbb4.ItemIndex >= 0 then
+  end else
+  if cbb1.Text = 'riwayat_poin' then
   begin
     zqry1.SQL.Clear;
-    zqry1.SQL.Text:='select * from wali_kelas';
+    zqry1.SQL.Add('SELECT riwayat_poin.id, siswa.'+cbb2.Text+', orang_tua.'+cbb3.Text+', wali_kelas.'+cbb4.Text+', kelas.'+cbb5.Text+', poin.'+cbb6.Text+'');
+    zqry1.SQL.Add('FROM riwayat_poin');
+    zqry1.SQL.Add('CROSS JOIN siswa ON riwayat_poin.siswa_id = siswa.id');
+    zqry1.SQL.Add('CROSS JOIN orang_tua ON riwayat_poin.ortu_id = orang_tua.id');
+    zqry1.SQL.Add('CROSS JOIN poin ON riwayat_poin.poin_id = poin.id');
+    zqry1.SQL.Add('CROSS JOIN wali_kelas ON riwayat_poin.wali_id = wali_kelas.id');
+    zqry1.SQL.Add('CROSS JOIN kelas ON riwayat_poin.kelas_id = kelas.id');
     zqry1.Open;
-    begin
-      cbb4.Items.Add(zqry1.Fields[1].FieldName);
-      cbb4.Items.Add(zqry1.Fields[2].FieldName);
-      cbb4.Items.Add(zqry1.Fields[3].FieldName);
-      cbb4.Items.Add(zqry1.Fields[4].FieldName);
-      cbb4.Items.Add(zqry1.Fields[5].FieldName);
-      cbb4.Items.Add(zqry1.Fields[6].FieldName);
-      cbb4.Items.Add(zqry1.Fields[7].FieldName);
-      cbb4.Items.Add(zqry1.Fields[8].FieldName);
-    end;
-  end;
-end;
-
-procedure TForm12.cbb5Select(Sender: TObject);
-begin
-  if cbb5.ItemIndex >= 0 then
-  begin
-    zqry1.SQL.Clear;
-    zqry1.SQL.Text:='select * from kelas';
-    zqry1.Open;
-    begin
-      cbb5.Items.Add(zqry1.Fields[1].FieldName);
-      cbb5.Items.Add(zqry1.Fields[2].FieldName);
-      cbb5.Items.Add(zqry1.Fields[3].FieldName);
-    end;
-  end;
-end;
-
-procedure TForm12.cbb6Select(Sender: TObject);
-begin
-  if cbb6.ItemIndex >= 0 then
-  begin
-    zqry1.SQL.Clear;
-    zqry1.SQL.Text:='select * from poin';
-    zqry1.Open;
-    begin
-      cbb5.Items.Add(zqry1.Fields[1].FieldName);
-      cbb5.Items.Add(zqry1.Fields[2].FieldName);
-      cbb5.Items.Add(zqry1.Fields[3].FieldName);
-      cbb5.Items.Add(zqry1.Fields[4].FieldName);
-    end;
   end;
 end;
 

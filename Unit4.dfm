@@ -290,7 +290,7 @@ object Form4: TForm4
         'M ((hubungan INNER JOIN siswa ON hubungan.siswa_id = siswa.id) I' +
         'NNER JOIN orang_tua ON hubungan.ortu_id = orang_tua.id)')
     Params = <>
-    Left = 831
+    Left = 830
     Top = 261
   end
   object ds2: TDataSource

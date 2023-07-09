@@ -223,8 +223,8 @@ object Form5: TForm5
     ItemHeight = 13
     TabOrder = 9
     Items.Strings = (
-      'ibu'
-      'ayah')
+      'aktif'
+      'tidak aktif')
   end
   object dbgrd2: TDBGrid
     Left = 25

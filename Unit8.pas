@@ -21,8 +21,13 @@ type
     zqry1: TZQuery;
     con1: TZConnection;
     ds1: TDataSource;
+    btn3: TButton;
     procedure btn2Click(Sender: TObject);
     procedure btn1Click(Sender: TObject);
+    procedure btn3Click(Sender: TObject);
+    procedure FormShow(Sender: TObject);
+    procedure posisiawal;
+    procedure bersih;
   private
     { Private declarations }
   public
@@ -34,7 +39,7 @@ var
 
 implementation
 
-uses Unit10;
+uses Unit10, Unit11;
 
 {$R *.dfm}
 
@@ -56,11 +61,32 @@ begin
   begin
     ShowMessage('USERNAME atau PASSWORD salah.');
   end;
+  posisiawal;
 end;
 
 procedure TForm8.btn1Click(Sender: TObject);
 begin
   close;
+end;
+
+procedure TForm8.btn3Click(Sender: TObject);
+begin
+  Form11.Show;
+end;
+procedure TForm8.posisiawal;
+begin
+  bersih;
+end;
+
+procedure TForm8.bersih;
+begin
+  edt1.Clear;
+  edt2.Clear;
+end;
+
+procedure TForm8.FormShow(Sender: TObject);
+begin
+  posisiawal;
 end;
 
 end.

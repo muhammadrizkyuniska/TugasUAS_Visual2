@@ -11,6 +11,7 @@ object Form9: TForm9
   Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
+  Position = poDesktopCenter
   OnShow = FormShow
   PixelsPerInch = 96
   TextHeight = 13
@@ -137,8 +138,8 @@ object Form9: TForm9
     OnClick = btn2Click
   end
   object btn3: TButton
-    Left = 405
-    Top = 149
+    Left = 406
+    Top = 148
     Width = 100
     Height = 55
     Caption = 'QUERY LIKE'

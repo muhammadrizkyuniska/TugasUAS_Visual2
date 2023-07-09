@@ -1,6 +1,6 @@
 object Form1: TForm1
-  Left = 262
-  Top = 266
+  Left = 248
+  Top = 152
   Width = 1513
   Height = 782
   Caption = 'SISWA'
@@ -16,8 +16,8 @@ object Form1: TForm1
   PixelsPerInch = 96
   TextHeight = 13
   object lbl2: TLabel
-    Left = 29
-    Top = 69
+    Left = 24
+    Top = 19
     Width = 24
     Height = 18
     Caption = 'NIS'
@@ -29,8 +29,8 @@ object Form1: TForm1
     ParentFont = False
   end
   object lbl3: TLabel
-    Left = 149
-    Top = 65
+    Left = 144
+    Top = 15
     Width = 5
     Height = 18
     Caption = ':'
@@ -42,8 +42,8 @@ object Form1: TForm1
     ParentFont = False
   end
   object lbl4: TLabel
-    Left = 30
-    Top = 104
+    Left = 25
+    Top = 54
     Width = 34
     Height = 18
     Caption = 'NISN'
@@ -55,8 +55,8 @@ object Form1: TForm1
     ParentFont = False
   end
   object lbl5: TLabel
-    Left = 149
-    Top = 100
+    Left = 144
+    Top = 50
     Width = 5
     Height = 18
     Caption = ':'
@@ -68,8 +68,8 @@ object Form1: TForm1
     ParentFont = False
   end
   object lbl6: TLabel
-    Left = 29
-    Top = 145
+    Left = 24
+    Top = 95
     Width = 40
     Height = 18
     Caption = 'NAMA'
@@ -81,8 +81,8 @@ object Form1: TForm1
     ParentFont = False
   end
   object lbl7: TLabel
-    Left = 149
-    Top = 141
+    Left = 144
+    Top = 91
     Width = 5
     Height = 18
     Caption = ':'
@@ -94,8 +94,8 @@ object Form1: TForm1
     ParentFont = False
   end
   object lbl8: TLabel
-    Left = 28
-    Top = 185
+    Left = 23
+    Top = 135
     Width = 25
     Height = 18
     Caption = 'NIK'
@@ -107,8 +107,8 @@ object Form1: TForm1
     ParentFont = False
   end
   object lbl9: TLabel
-    Left = 149
-    Top = 181
+    Left = 144
+    Top = 131
     Width = 5
     Height = 18
     Caption = ':'
@@ -120,8 +120,8 @@ object Form1: TForm1
     ParentFont = False
   end
   object lbl14: TLabel
-    Left = 28
-    Top = 224
+    Left = 23
+    Top = 174
     Width = 112
     Height = 18
     Caption = 'TEMPAAT LAHIR'
@@ -133,8 +133,8 @@ object Form1: TForm1
     ParentFont = False
   end
   object lbl15: TLabel
-    Left = 149
-    Top = 220
+    Left = 144
+    Top = 170
     Width = 5
     Height = 18
     Caption = ':'
@@ -146,8 +146,8 @@ object Form1: TForm1
     ParentFont = False
   end
   object lbl1: TLabel
-    Left = 29
-    Top = 266
+    Left = 24
+    Top = 216
     Width = 111
     Height = 18
     Caption = 'TANGGAL LAHIR'
@@ -159,8 +159,8 @@ object Form1: TForm1
     ParentFont = False
   end
   object lbl10: TLabel
-    Left = 148
-    Top = 264
+    Left = 143
+    Top = 214
     Width = 5
     Height = 18
     Caption = ':'
@@ -172,8 +172,8 @@ object Form1: TForm1
     ParentFont = False
   end
   object lbl11: TLabel
-    Left = 29
-    Top = 303
+    Left = 24
+    Top = 253
     Width = 104
     Height = 18
     Caption = 'JENIS KELAMIN'
@@ -185,8 +185,8 @@ object Form1: TForm1
     ParentFont = False
   end
   object lbl12: TLabel
-    Left = 148
-    Top = 299
+    Left = 143
+    Top = 249
     Width = 5
     Height = 18
     Caption = ':'
@@ -198,8 +198,8 @@ object Form1: TForm1
     ParentFont = False
   end
   object lbl13: TLabel
-    Left = 738
-    Top = 62
+    Left = 733
+    Top = 12
     Width = 110
     Height = 18
     Caption = 'TINGKAT KELAS'
@@ -211,8 +211,8 @@ object Form1: TForm1
     ParentFont = False
   end
   object lbl16: TLabel
-    Left = 863
-    Top = 63
+    Left = 858
+    Top = 13
     Width = 5
     Height = 18
     Caption = ':'
@@ -224,8 +224,8 @@ object Form1: TForm1
     ParentFont = False
   end
   object lbl17: TLabel
-    Left = 740
-    Top = 100
+    Left = 735
+    Top = 50
     Width = 62
     Height = 18
     Caption = 'JURUSAN'
@@ -237,8 +237,8 @@ object Form1: TForm1
     ParentFont = False
   end
   object lbl18: TLabel
-    Left = 863
-    Top = 102
+    Left = 858
+    Top = 52
     Width = 5
     Height = 18
     Caption = ':'
@@ -250,8 +250,8 @@ object Form1: TForm1
     ParentFont = False
   end
   object lbl19: TLabel
-    Left = 740
-    Top = 138
+    Left = 735
+    Top = 88
     Width = 82
     Height = 18
     Caption = 'WALI KELAS'
@@ -263,8 +263,8 @@ object Form1: TForm1
     ParentFont = False
   end
   object lbl20: TLabel
-    Left = 863
-    Top = 141
+    Left = 858
+    Top = 91
     Width = 5
     Height = 18
     Caption = ':'
@@ -276,8 +276,8 @@ object Form1: TForm1
     ParentFont = False
   end
   object lbl21: TLabel
-    Left = 740
-    Top = 185
+    Left = 735
+    Top = 135
     Width = 56
     Height = 18
     Caption = 'ALAMAT'
@@ -289,8 +289,8 @@ object Form1: TForm1
     ParentFont = False
   end
   object lbl22: TLabel
-    Left = 865
-    Top = 189
+    Left = 860
+    Top = 139
     Width = 5
     Height = 18
     Caption = ':'
@@ -302,8 +302,8 @@ object Form1: TForm1
     ParentFont = False
   end
   object lbl23: TLabel
-    Left = 740
-    Top = 224
+    Left = 735
+    Top = 174
     Width = 33
     Height = 18
     Caption = 'TELP'
@@ -315,8 +315,8 @@ object Form1: TForm1
     ParentFont = False
   end
   object lbl24: TLabel
-    Left = 865
-    Top = 224
+    Left = 860
+    Top = 174
     Width = 5
     Height = 18
     Caption = ':'
@@ -328,8 +328,8 @@ object Form1: TForm1
     ParentFont = False
   end
   object lbl25: TLabel
-    Left = 740
-    Top = 263
+    Left = 735
+    Top = 213
     Width = 18
     Height = 18
     Caption = 'HP'
@@ -341,8 +341,8 @@ object Form1: TForm1
     ParentFont = False
   end
   object lbl26: TLabel
-    Left = 865
-    Top = 265
+    Left = 860
+    Top = 215
     Width = 5
     Height = 18
     Caption = ':'
@@ -354,8 +354,8 @@ object Form1: TForm1
     ParentFont = False
   end
   object lbl27: TLabel
-    Left = 740
-    Top = 303
+    Left = 735
+    Top = 253
     Width = 55
     Height = 18
     Caption = 'STATUS'
@@ -367,8 +367,8 @@ object Form1: TForm1
     ParentFont = False
   end
   object lbl28: TLabel
-    Left = 865
-    Top = 305
+    Left = 860
+    Top = 255
     Width = 5
     Height = 18
     Caption = ':'
@@ -380,8 +380,8 @@ object Form1: TForm1
     ParentFont = False
   end
   object edt1: TEdit
-    Left = 179
-    Top = 62
+    Left = 174
+    Top = 12
     Width = 537
     Height = 24
     Font.Charset = DEFAULT_CHARSET
@@ -393,8 +393,8 @@ object Form1: TForm1
     TabOrder = 0
   end
   object edt2: TEdit
-    Left = 179
-    Top = 100
+    Left = 174
+    Top = 50
     Width = 537
     Height = 24
     Font.Charset = DEFAULT_CHARSET
@@ -406,8 +406,8 @@ object Form1: TForm1
     TabOrder = 1
   end
   object edt3: TEdit
-    Left = 180
-    Top = 141
+    Left = 175
+    Top = 91
     Width = 537
     Height = 24
     Font.Charset = DEFAULT_CHARSET
@@ -419,8 +419,8 @@ object Form1: TForm1
     TabOrder = 2
   end
   object edt4: TEdit
-    Left = 180
-    Top = 180
+    Left = 175
+    Top = 130
     Width = 537
     Height = 24
     Font.Charset = DEFAULT_CHARSET
@@ -432,8 +432,8 @@ object Form1: TForm1
     TabOrder = 3
   end
   object edt5: TEdit
-    Left = 180
-    Top = 220
+    Left = 175
+    Top = 170
     Width = 537
     Height = 24
     Font.Charset = DEFAULT_CHARSET
@@ -445,8 +445,8 @@ object Form1: TForm1
     TabOrder = 4
   end
   object btn1: TButton
-    Left = 405
-    Top = 342
+    Left = 400
+    Top = 292
     Width = 100
     Height = 55
     Caption = 'BARU'
@@ -454,8 +454,8 @@ object Form1: TForm1
     OnClick = btn1Click
   end
   object btn2: TButton
-    Left = 545
-    Top = 342
+    Left = 540
+    Top = 292
     Width = 100
     Height = 55
     Caption = 'SIMPAN'
@@ -463,8 +463,8 @@ object Form1: TForm1
     OnClick = btn2Click
   end
   object btn3: TButton
-    Left = 690
-    Top = 341
+    Left = 685
+    Top = 291
     Width = 100
     Height = 55
     Caption = 'UBAH'
@@ -472,8 +472,8 @@ object Form1: TForm1
     OnClick = btn3Click
   end
   object btn4: TButton
-    Left = 830
-    Top = 342
+    Left = 825
+    Top = 292
     Width = 100
     Height = 55
     Caption = 'HAPUS'
@@ -481,8 +481,8 @@ object Form1: TForm1
     OnClick = btn4Click
   end
   object btn5: TButton
-    Left = 964
-    Top = 342
+    Left = 959
+    Top = 292
     Width = 100
     Height = 55
     Caption = 'BATAL'
@@ -490,8 +490,8 @@ object Form1: TForm1
     OnClick = btn5Click
   end
   object dbgrd1: TDBGrid
-    Left = 11
-    Top = 414
+    Left = 6
+    Top = 364
     Width = 1452
     Height = 319
     DataSource = ds1
@@ -504,8 +504,8 @@ object Form1: TForm1
     OnCellClick = dbgrd1CellClick
   end
   object edt7: TEdit
-    Left = 895
-    Top = 100
+    Left = 888
+    Top = 50
     Width = 537
     Height = 24
     Font.Charset = DEFAULT_CHARSET
@@ -517,8 +517,8 @@ object Form1: TForm1
     TabOrder = 11
   end
   object edt8: TEdit
-    Left = 891
-    Top = 140
+    Left = 888
+    Top = 87
     Width = 537
     Height = 24
     Font.Charset = DEFAULT_CHARSET
@@ -530,8 +530,8 @@ object Form1: TForm1
     TabOrder = 12
   end
   object edt9: TEdit
-    Left = 896
-    Top = 178
+    Left = 888
+    Top = 128
     Width = 537
     Height = 24
     Font.Charset = DEFAULT_CHARSET
@@ -543,8 +543,8 @@ object Form1: TForm1
     TabOrder = 13
   end
   object edt10: TEdit
-    Left = 895
-    Top = 218
+    Left = 888
+    Top = 168
     Width = 537
     Height = 24
     Font.Charset = DEFAULT_CHARSET
@@ -556,8 +556,8 @@ object Form1: TForm1
     TabOrder = 14
   end
   object edt11: TEdit
-    Left = 896
-    Top = 263
+    Left = 888
+    Top = 213
     Width = 537
     Height = 24
     Font.Charset = DEFAULT_CHARSET
@@ -569,8 +569,8 @@ object Form1: TForm1
     TabOrder = 15
   end
   object dtp1: TDateTimePicker
-    Left = 181
-    Top = 257
+    Left = 176
+    Top = 207
     Width = 536
     Height = 24
     Date = 45102.464399895830000000
@@ -584,8 +584,8 @@ object Form1: TForm1
     TabOrder = 16
   end
   object edt6: TEdit
-    Left = 893
-    Top = 61
+    Left = 888
+    Top = 11
     Width = 537
     Height = 24
     Font.Charset = DEFAULT_CHARSET
@@ -597,8 +597,8 @@ object Form1: TForm1
     TabOrder = 17
   end
   object cbb1: TComboBox
-    Left = 180
-    Top = 297
+    Left = 175
+    Top = 247
     Width = 535
     Height = 24
     Font.Charset = DEFAULT_CHARSET
@@ -614,8 +614,8 @@ object Form1: TForm1
       'P')
   end
   object cbb2: TComboBox
-    Left = 894
-    Top = 301
+    Left = 889
+    Top = 249
     Width = 542
     Height = 24
     Font.Charset = DEFAULT_CHARSET
@@ -631,8 +631,8 @@ object Form1: TForm1
       'Tidak Aktif')
   end
   object btn6: TButton
-    Left = 1090
-    Top = 344
+    Left = 1085
+    Top = 294
     Width = 104
     Height = 53
     Caption = 'VIEW REPORT'
@@ -651,8 +651,8 @@ object Form1: TForm1
     SQL.Strings = (
       'select * from siswa')
     Params = <>
-    Left = 65
-    Top = 10
+    Left = 82
+    Top = 308
   end
   object con1: TZConnection
     ControlsCodePage = cGET_ACP
@@ -667,21 +667,21 @@ object Form1: TForm1
     LibraryLocation = 
       'C:\Program Files (x86)\Borland\Delphi7\Projects\New folder (2)\T' +
       'ugas UAS Visual2\libmysql.dll'
-    Left = 23
-    Top = 12
+    Left = 40
+    Top = 311
   end
   object ds1: TDataSource
     DataSet = zqry1
-    Left = 107
-    Top = 9
+    Left = 124
+    Top = 308
   end
   object frxdbdtst1: TfrxDBDataset
     UserName = 'frxDBDataset1'
     CloseDataSource = False
     DataSet = zqry1
     BCDToCurrency = False
-    Left = 165
-    Top = 9
+    Left = 182
+    Top = 308
   end
   object frxrprt1: TfrxReport
     Version = '6.9.15'
@@ -698,8 +698,8 @@ object Form1: TForm1
       'begin'
       ''
       'end.')
-    Left = 227
-    Top = 12
+    Left = 244
+    Top = 311
     Datasets = <
       item
         DataSet = frxdbdtst1

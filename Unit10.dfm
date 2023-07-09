@@ -1,6 +1,6 @@
 object Form10: TForm10
-  Left = 485
-  Top = 413
+  Left = 334
+  Top = 223
   Width = 1305
   Height = 673
   Caption = 'MAIN MENU'
@@ -12,6 +12,7 @@ object Form10: TForm10
   Font.Style = []
   Menu = mm1
   OldCreateOrder = False
+  Position = poDesktopCenter
   PixelsPerInch = 96
   TextHeight = 13
   object lbl1: TLabel
@@ -35,8 +36,8 @@ object Form10: TForm10
     Width = 722
     Height = 144
     Caption = 
-      '           SELAMAT DATANG '#13#10'PROJECT SAYA APLIKASI DELPHI 7 '#13#10'   ' +
-      '                 #UAS'
+      '           SELAMAT DATANG DI'#13#10'PROJECT SAYA APLIKASI DELPHI 7 '#13#10' ' +
+      '                   #UAS'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -40
@@ -45,7 +46,7 @@ object Form10: TForm10
     ParentFont = False
   end
   object btn1: TButton
-    Left = 1095
+    Left = 1094
     Top = 10
     Width = 181
     Height = 104
@@ -65,16 +66,16 @@ object Form10: TForm10
     object SISWA1: TMenuItem
       Caption = 'MENU'
       object LOGIN1: TMenuItem
-        Caption = 'LOGIN'
+        Caption = 'SIGN IN'
         OnClick = LOGIN1Click
+      end
+      object DAFTAR1: TMenuItem
+        Caption = 'SIGN UP'
+        OnClick = DAFTAR1Click
       end
       object LOGOUT1: TMenuItem
         Caption = 'LOG OUT'
         OnClick = LOGOUT1Click
-      end
-      object DAFTAR1: TMenuItem
-        Caption = 'DAFTAR'
-        OnClick = DAFTAR1Click
       end
     end
     object SIS1: TMenuItem

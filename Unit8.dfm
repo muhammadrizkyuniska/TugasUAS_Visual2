@@ -1,6 +1,6 @@
 object Form8: TForm8
-  Left = 526
-  Top = 119
+  Left = 523
+  Top = 292
   Width = 782
   Height = 456
   Caption = 'LOGIN'
@@ -12,6 +12,7 @@ object Form8: TForm8
   Font.Style = []
   OldCreateOrder = False
   Position = poDesktopCenter
+  OnShow = FormShow
   PixelsPerInch = 96
   TextHeight = 13
   object lbl1: TLabel
@@ -80,8 +81,8 @@ object Form8: TForm8
     ParentFont = False
   end
   object btn1: TButton
-    Left = 262
-    Top = 223
+    Left = 200
+    Top = 225
     Width = 100
     Height = 55
     Caption = 'BATAL'
@@ -89,7 +90,7 @@ object Form8: TForm8
     OnClick = btn1Click
   end
   object btn2: TButton
-    Left = 405
+    Left = 497
     Top = 221
     Width = 100
     Height = 55
@@ -123,6 +124,15 @@ object Form8: TForm8
     ParentFont = False
     TabOrder = 1
   end
+  object btn3: TButton
+    Left = 349
+    Top = 225
+    Width = 100
+    Height = 55
+    Caption = 'SIGN UP'
+    TabOrder = 4
+    OnClick = btn3Click
+  end
   object zqry1: TZQuery
     Connection = con1
     CachedUpdates = True
@@ -130,8 +140,8 @@ object Form8: TForm8
     SQL.Strings = (
       'select * from user')
     Params = <>
-    Left = 716
-    Top = 134
+    Left = 717
+    Top = 133
   end
   object con1: TZConnection
     ControlsCodePage = cGET_ACP
@@ -146,7 +156,7 @@ object Form8: TForm8
     LibraryLocation = 
       'C:\Program Files (x86)\Borland\Delphi7\Projects\New folder (2)\T' +
       'ugas UAS Visual2\libmysql.dll'
-    Left = 716
+    Left = 715
     Top = 89
   end
   object ds1: TDataSource

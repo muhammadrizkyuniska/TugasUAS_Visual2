@@ -2,7 +2,7 @@ object Form6: TForm6
   Left = 250
   Top = 222
   Width = 886
-  Height = 623
+  Height = 511
   Caption = 'KELAS'
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -16,8 +16,8 @@ object Form6: TForm6
   PixelsPerInch = 96
   TextHeight = 13
   object lbl1: TLabel
-    Left = 24
-    Top = 78
+    Left = 27
+    Top = 22
     Width = 86
     Height = 18
     Caption = 'NAMA KELAS'
@@ -29,8 +29,8 @@ object Form6: TForm6
     ParentFont = False
   end
   object lbl10: TLabel
-    Left = 222
-    Top = 77
+    Left = 225
+    Top = 21
     Width = 5
     Height = 18
     Caption = ':'
@@ -42,8 +42,8 @@ object Form6: TForm6
     ParentFont = False
   end
   object lbl2: TLabel
-    Left = 24
-    Top = 115
+    Left = 27
+    Top = 59
     Width = 84
     Height = 18
     Caption = 'JENIS KELAS'
@@ -55,8 +55,8 @@ object Form6: TForm6
     ParentFont = False
   end
   object lbl11: TLabel
-    Left = 222
-    Top = 115
+    Left = 225
+    Top = 59
     Width = 5
     Height = 18
     Caption = ':'
@@ -68,8 +68,8 @@ object Form6: TForm6
     ParentFont = False
   end
   object lbl7: TLabel
-    Left = 24
-    Top = 147
+    Left = 27
+    Top = 91
     Width = 62
     Height = 18
     Caption = 'JURUSAN'
@@ -81,8 +81,8 @@ object Form6: TForm6
     ParentFont = False
   end
   object lbl16: TLabel
-    Left = 222
-    Top = 146
+    Left = 225
+    Top = 90
     Width = 5
     Height = 18
     Caption = ':'
@@ -94,8 +94,8 @@ object Form6: TForm6
     ParentFont = False
   end
   object btn1: TButton
-    Left = 13
-    Top = 206
+    Left = 16
+    Top = 150
     Width = 100
     Height = 55
     Caption = 'BARU'
@@ -103,8 +103,8 @@ object Form6: TForm6
     OnClick = btn1Click
   end
   object btn2: TButton
-    Left = 156
-    Top = 204
+    Left = 159
+    Top = 148
     Width = 100
     Height = 55
     Caption = 'SIMPAN'
@@ -112,8 +112,8 @@ object Form6: TForm6
     OnClick = btn2Click
   end
   object btn3: TButton
-    Left = 300
-    Top = 205
+    Left = 303
+    Top = 149
     Width = 100
     Height = 55
     Caption = 'UBAH'
@@ -121,8 +121,8 @@ object Form6: TForm6
     OnClick = btn3Click
   end
   object btn4: TButton
-    Left = 439
-    Top = 205
+    Left = 442
+    Top = 149
     Width = 100
     Height = 55
     Caption = 'HAPUS'
@@ -130,8 +130,8 @@ object Form6: TForm6
     OnClick = btn4Click
   end
   object btn5: TButton
-    Left = 582
-    Top = 204
+    Left = 585
+    Top = 148
     Width = 100
     Height = 55
     Caption = 'BATAL'
@@ -139,8 +139,8 @@ object Form6: TForm6
     OnClick = btn5Click
   end
   object dbgrd1: TDBGrid
-    Left = 15
-    Top = 275
+    Left = 18
+    Top = 219
     Width = 838
     Height = 240
     DataSource = ds1
@@ -153,8 +153,8 @@ object Form6: TForm6
     OnCellClick = dbgrd1CellClick
   end
   object edt1: TEdit
-    Left = 261
-    Top = 76
+    Left = 264
+    Top = 20
     Width = 537
     Height = 24
     Font.Charset = DEFAULT_CHARSET
@@ -166,8 +166,8 @@ object Form6: TForm6
     TabOrder = 0
   end
   object edt2: TEdit
-    Left = 260
-    Top = 144
+    Left = 263
+    Top = 88
     Width = 537
     Height = 24
     Font.Charset = DEFAULT_CHARSET
@@ -179,8 +179,8 @@ object Form6: TForm6
     TabOrder = 2
   end
   object cbb1: TComboBox
-    Left = 260
-    Top = 112
+    Left = 263
+    Top = 56
     Width = 541
     Height = 21
     ItemHeight = 13
@@ -194,8 +194,8 @@ object Form6: TForm6
       'F')
   end
   object btn6: TButton
-    Left = 715
-    Top = 207
+    Left = 718
+    Top = 151
     Width = 100
     Height = 55
     Caption = 'VIEW REPORT'
@@ -209,8 +209,8 @@ object Form6: TForm6
     SQL.Strings = (
       'select * from kelas')
     Params = <>
-    Left = 148
-    Top = 75
+    Left = 151
+    Top = 19
   end
   object con1: TZConnection
     ControlsCodePage = cGET_ACP
@@ -225,21 +225,21 @@ object Form6: TForm6
     LibraryLocation = 
       'C:\Program Files (x86)\Borland\Delphi7\Projects\New folder (2)\T' +
       'ugas UAS Visual2\libmysql.dll'
-    Left = 131
-    Top = 108
+    Left = 134
+    Top = 52
   end
   object ds1: TDataSource
     DataSet = zqry1
-    Left = 178
-    Top = 105
+    Left = 181
+    Top = 49
   end
   object frxdbdtst1: TfrxDBDataset
     UserName = 'frxDBDataset1'
     CloseDataSource = False
     DataSet = zqry1
     BCDToCurrency = False
-    Left = 130
-    Top = 151
+    Left = 133
+    Top = 95
   end
   object frxrprt1: TfrxReport
     Version = '6.9.15'
@@ -256,8 +256,8 @@ object Form6: TForm6
       'begin'
       ''
       'end.')
-    Left = 186
-    Top = 155
+    Left = 189
+    Top = 99
     Datasets = <
       item
         DataSet = frxdbdtst1

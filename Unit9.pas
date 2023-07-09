@@ -68,6 +68,7 @@ begin
     zqry1.SQL.Text := 'SELECT * FROM ' + cbb1.Text;
     zqry1.Open;
 
+    cbb2.Clear;
     if cbb1.Text='siswa' then
     begin
       cbb2.Items.Add(zqry1.Fields[3].FieldName);

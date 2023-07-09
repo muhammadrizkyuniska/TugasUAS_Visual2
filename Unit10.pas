@@ -59,72 +59,75 @@ uses Unit1, Unit2, Unit3, Unit4, Unit5, Unit6, Unit7,Unit8, Unit9, Unit11, Unit1
 
 procedure TForm10.LOGOUT1Click(Sender: TObject);
 begin
-  Form8.ShowModal;
+  Form8.Show;
+  Self.Close;
 end;
 
 procedure TForm10.LOGIN1Click(Sender: TObject);
 begin
-  form8.ShowModal;
+  form8.Show;
+  Self.Close;
 end;
 
 procedure TForm10.DAFTAR1Click(Sender: TObject);
 begin
-  Form11.ShowModal; Form11.Close;
+  Form11.Show;
 end;
 
 procedure TForm10.SISWA2Click(Sender: TObject);
 begin
-  Form1.ShowModal;
+  Form1.Show;
 end;
 
 procedure TForm10.ORANGTUA1Click(Sender: TObject);
 begin
-  form2.ShowModal;
+  form2.Show;
 end;
 
 procedure TForm10.HUBUNGAN1Click(Sender: TObject);
 begin
-  Form4.ShowModal;
+  Form4.Show;
 end;
 
 procedure TForm10.WALIKELAS1Click(Sender: TObject);
 begin
-  Form3.ShowModal;
+  Form3.Show;
 end;
 
 procedure TForm10.KELAS1Click(Sender: TObject);
 begin
-  Form6.ShowModal;
+  Form6.Show;
 end;
 
 procedure TForm10.POIBN1Click(Sender: TObject);
 begin
-  form5.ShowModal;
+  form5.Show;
 end;
 
 procedure TForm10.RIWAYATPOIN1Click(Sender: TObject);
 begin
-  Form7.ShowModal;
+  Form7.Show;
 end;
 
 procedure TForm10.USER1Click(Sender: TObject);
 begin
-  Form11.ShowModal;
+  Form11.Show;
 end;
 
 procedure TForm10.DAFTARQUERY1Click(Sender: TObject);
 begin
-  form9.ShowModal;
+  form9.Show;
 end;
 
 procedure TForm10.btn1Click(Sender: TObject);
 begin
   Form8.Show;
+  Self.Close;
 end;
 
 procedure TForm10.QUERYJOIN1Click(Sender: TObject);
 begin
-  Form12.ShowModal
+  Form12.Show;
 end;
 
 end.

@@ -114,22 +114,24 @@ begin
   if cbb1.Text = 'hubungan' then
   begin
     zqry1.SQL.Clear;
-    zqry1.SQL.Add('SELECT hubungan.id, siswa.'+cbb2.Text+',orang_tua.'+cbb3.Text+'');
+    zqry1.SQL.Add('SELECT siswa.'+cbb2.Text+',hubungan.siswa_id ,orang_tua.'+cbb3.Text+',hubungan.ortu_id');
     zqry1.SQL.Add('FROM hubungan');
     zqry1.SQL.Add('LEFT JOIN siswa ON hubungan.siswa_id = siswa.id');
     zqry1.SQL.Add('LEFT JOIN orang_tua ON hubungan.ortu_id = orang_tua.id');
+    zqry1.SQL.Add('ORDER BY siswa.'+cbb2.Text+',orang_tua.'+cbb3.Text+'');
     zqry1.Open;
   end else
   if cbb1.Text = 'riwayat_poin' then
   begin
     zqry1.SQL.Clear;
-    zqry1.SQL.Add('SELECT riwayat_poin.id, siswa.'+cbb2.Text+', orang_tua.'+cbb3.Text+', wali_kelas.'+cbb4.Text+', kelas.'+cbb5.Text+', poin.'+cbb6.Text+'');
+    zqry1.SQL.Add('SELECT siswa.'+cbb2.Text+',riwayat_poin.siswa_id, orang_tua.'+cbb3.Text+',riwayat_poin.ortu_id,, wali_kelas.'+cbb4.Text+',riwayat_poin.wali_id, kelas.'+cbb5.Text+',riwayat_poin.kelas_id, poin.'+cbb6.Text+',riwayat_poin.poin_id,');
     zqry1.SQL.Add('FROM riwayat_poin');
     zqry1.SQL.Add('LEFT JOIN siswa ON riwayat_poin.siswa_id = siswa.id');
     zqry1.SQL.Add('LEFT JOIN orang_tua ON riwayat_poin.ortu_id = orang_tua.id');
     zqry1.SQL.Add('LEFT JOIN poin ON riwayat_poin.poin_id = poin.id');
     zqry1.SQL.Add('LEFT JOIN wali_kelas ON riwayat_poin.wali_id = wali_kelas.id');
     zqry1.SQL.Add('LEFT JOIN kelas ON riwayat_poin.kelas_id = kelas.id');
+    zqry1.SQL.Add('ORDER BY siswa.'+cbb2.Text+', orang_tua.'+cbb3.Text+', wali_kelas.'+cbb4.Text+', kelas.'+cbb5.Text+', poin.'+cbb6.Text+'');
     zqry1.Open;
   end;
 end;
@@ -210,6 +212,7 @@ begin
     zqry1.SQL.Add('FROM hubungan');
     zqry1.SQL.Add('RIGHT JOIN siswa ON hubungan.siswa_id = siswa.id');
     zqry1.SQL.Add('RIGHT JOIN orang_tua ON hubungan.ortu_id = orang_tua.id');
+    zqry1.SQL.Add('ORDER BY hubungan.id');
     zqry1.Open;
   end else
   if cbb1.Text = 'riwayat_poin' then
@@ -222,6 +225,7 @@ begin
     zqry1.SQL.Add('RIGHT JOIN poin ON riwayat_poin.poin_id = poin.id');
     zqry1.SQL.Add('RIGHT JOIN wali_kelas ON riwayat_poin.wali_id = wali_kelas.id');
     zqry1.SQL.Add('RIGHT JOIN kelas ON riwayat_poin.kelas_id = kelas.id');
+    zqry1.SQL.Add('ORDER BY riwayat_poin.id');
     zqry1.Open;
   end;
 end;
@@ -231,10 +235,11 @@ begin
   if cbb1.Text = 'hubungan' then
   begin
     zqry1.SQL.Clear;
-    zqry1.SQL.Add('SELECT hubungan.id, siswa.'+cbb2.Text+',orang_tua.'+cbb3.Text+'');
+    zqry1.SQL.Add('SELECT siswa.'+cbb2.Text+',orang_tua.'+cbb3.Text+',hubungan.id');
     zqry1.SQL.Add('FROM hubungan');
-    zqry1.SQL.Add('CROSS JOIN siswa ON hubungan.siswa_id = siswa.id');
-    zqry1.SQL.Add('CROSS JOIN orang_tua ON hubungan.ortu_id = orang_tua.id');
+    zqry1.SQL.Add('CROSS JOIN siswa');
+    zqry1.SQL.Add('CROSS JOIN orang_tua');
+    zqry1.SQL.Add('WHERE hubungan.siswa_id=siswa.id and hubungan.ortu_id=orang_tua.id');
     zqry1.Open;
   end else
   if cbb1.Text = 'riwayat_poin' then
@@ -242,11 +247,12 @@ begin
     zqry1.SQL.Clear;
     zqry1.SQL.Add('SELECT riwayat_poin.id, siswa.'+cbb2.Text+', orang_tua.'+cbb3.Text+', wali_kelas.'+cbb4.Text+', kelas.'+cbb5.Text+', poin.'+cbb6.Text+'');
     zqry1.SQL.Add('FROM riwayat_poin');
-    zqry1.SQL.Add('CROSS JOIN siswa ON riwayat_poin.siswa_id = siswa.id');
-    zqry1.SQL.Add('CROSS JOIN orang_tua ON riwayat_poin.ortu_id = orang_tua.id');
-    zqry1.SQL.Add('CROSS JOIN poin ON riwayat_poin.poin_id = poin.id');
-    zqry1.SQL.Add('CROSS JOIN wali_kelas ON riwayat_poin.wali_id = wali_kelas.id');
-    zqry1.SQL.Add('CROSS JOIN kelas ON riwayat_poin.kelas_id = kelas.id');
+    zqry1.SQL.Add('CROSS JOIN siswa');
+    zqry1.SQL.Add('CROSS JOIN orang_tua');
+    zqry1.SQL.Add('CROSS JOIN poin');
+    zqry1.SQL.Add('CROSS JOIN wali_kelas');
+    zqry1.SQL.Add('CROSS JOIN kelas');
+    zqry1.SQL.Add('WHERE riwayat_poin.siswa_id=siswa.id and riwayat_poin.ortu_id=orang_tua.id and riwayat_poin.poin_id=poin.id and riwayat_poin.kelas_id=kelas.id and riwayat_poin.wali_id=wali_kelas.id');
     zqry1.Open;
   end;
 end;

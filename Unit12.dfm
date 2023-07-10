@@ -216,7 +216,7 @@ object Form12: TForm12
     OnClick = btn2Click
   end
   object btn3: TButton
-    Left = 300
+    Left = 301
     Top = 260
     Width = 100
     Height = 55

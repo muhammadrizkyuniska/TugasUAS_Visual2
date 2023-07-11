@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3307
--- Generation Time: Jul 10, 2023 at 06:36 AM
+-- Generation Time: Jul 11, 2023 at 06:00 AM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -265,8 +265,8 @@ INSERT INTO `wali_kelas` (`id`, `nik`, `nama_wali`, `jenis_kelamin`, `pendidikan
 --
 ALTER TABLE `hubungan`
   ADD PRIMARY KEY (`id`),
-  ADD KEY `ortu_id` (`ortu_id`),
-  ADD KEY `siswa_id` (`siswa_id`);
+  ADD KEY `hubungan_ibfk_3` (`ortu_id`),
+  ADD KEY `hubungan_ibfk_4` (`siswa_id`);
 
 --
 -- Indexes for table `kelas`
@@ -291,11 +291,11 @@ ALTER TABLE `poin`
 --
 ALTER TABLE `riwayat_poin`
   ADD PRIMARY KEY (`id`),
-  ADD KEY `kelas_id` (`kelas_id`),
-  ADD KEY `poin_id` (`poin_id`),
-  ADD KEY `ortu_id` (`ortu_id`),
-  ADD KEY `siswa_id` (`siswa_id`),
-  ADD KEY `wali_id` (`wali_id`);
+  ADD KEY `riwayat_poin_ibfk_1` (`kelas_id`),
+  ADD KEY `riwayat_poin_ibfk_3` (`poin_id`),
+  ADD KEY `riwayat_poin_ibfk_6` (`ortu_id`),
+  ADD KEY `riwayat_poin_ibfk_7` (`siswa_id`),
+  ADD KEY `riwayat_poin_ibfk_8` (`wali_id`);
 
 --
 -- Indexes for table `siswa`
@@ -375,18 +375,18 @@ ALTER TABLE `wali_kelas`
 -- Constraints for table `hubungan`
 --
 ALTER TABLE `hubungan`
-  ADD CONSTRAINT `hubungan_ibfk_3` FOREIGN KEY (`ortu_id`) REFERENCES `orang_tua` (`id`),
-  ADD CONSTRAINT `hubungan_ibfk_4` FOREIGN KEY (`siswa_id`) REFERENCES `siswa` (`id`);
+  ADD CONSTRAINT `hubungan_ibfk_3` FOREIGN KEY (`ortu_id`) REFERENCES `orang_tua` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `hubungan_ibfk_4` FOREIGN KEY (`siswa_id`) REFERENCES `siswa` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `riwayat_poin`
 --
 ALTER TABLE `riwayat_poin`
-  ADD CONSTRAINT `riwayat_poin_ibfk_1` FOREIGN KEY (`kelas_id`) REFERENCES `kelas` (`id`),
-  ADD CONSTRAINT `riwayat_poin_ibfk_3` FOREIGN KEY (`poin_id`) REFERENCES `poin` (`id`),
-  ADD CONSTRAINT `riwayat_poin_ibfk_6` FOREIGN KEY (`ortu_id`) REFERENCES `orang_tua` (`id`),
-  ADD CONSTRAINT `riwayat_poin_ibfk_7` FOREIGN KEY (`siswa_id`) REFERENCES `siswa` (`id`),
-  ADD CONSTRAINT `riwayat_poin_ibfk_8` FOREIGN KEY (`wali_id`) REFERENCES `wali_kelas` (`id`);
+  ADD CONSTRAINT `riwayat_poin_ibfk_1` FOREIGN KEY (`kelas_id`) REFERENCES `kelas` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `riwayat_poin_ibfk_3` FOREIGN KEY (`poin_id`) REFERENCES `poin` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `riwayat_poin_ibfk_6` FOREIGN KEY (`ortu_id`) REFERENCES `orang_tua` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `riwayat_poin_ibfk_7` FOREIGN KEY (`siswa_id`) REFERENCES `siswa` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `riwayat_poin_ibfk_8` FOREIGN KEY (`wali_id`) REFERENCES `wali_kelas` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
